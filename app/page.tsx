@@ -44,7 +44,7 @@ export default function Home() {
 		}
 	];
 	return (
-		<section className="flex flex-col w-full items-center gap-4">
+		<section className="flex flex-col w-full items-center gap-10">
 			<section className="relative h-auto min-h-[calc(100vh-64px)] w-full">
 				<SwiperHome />
 				<div className="absolute left-[15%] top-1/2 flex flex-col justify-center items-center z-50">
@@ -69,7 +69,7 @@ export default function Home() {
 				<Button>Ver más</Button>
 			</section>
 			<section className="flex flex-col justify-center items-center z-10 w-full">
-				<h2 className="text-2xl font-semibold mb-4">Testimonios</h2>
+				<h2 className="text-2xl font-semibold">Testimonios</h2>
 				<InfiniteMovingCards items={items} speed="slow" />
 			</section>
 		</section>
