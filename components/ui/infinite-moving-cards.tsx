@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import { Image } from "@nextui-org/image";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -90,9 +90,9 @@ export const InfiniteMovingCards = ({
                 {items.map((item, idx) => (
                     <li
                         className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-zinc-700 md:w-[450px] bg-zinc-900 overflow-hidden shadow-lg group"
-                        key={item.name}
+                        key={item.name + idx}
                     >
-                        <Image src={item.image} width={500} className="absolute rounded-none brightness-[0.25] saturate-0 group-hover:saturate-[0.25] group-hover:scale-105" />
+                        <Image src={item.image} alt={item.name} width={500} height={400} className="absolute rounded-none brightness-[0.25] saturate-0 group-hover:saturate-[0.25] group-hover:scale-105 transition-transform" />
                         <blockquote className="px-8 py-6">
                             <div
                                 aria-hidden="true"
