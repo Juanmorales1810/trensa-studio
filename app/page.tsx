@@ -8,6 +8,7 @@ import SwiperHome from "@/components/swiperHome";
 import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import CallToAction from "@/components/callToAction";
 
 
 export default function Home() {
@@ -72,6 +73,11 @@ export default function Home() {
 				<h2 className="text-2xl font-semibold">Testimonios</h2>
 				<InfiniteMovingCards items={items} speed="slow" />
 			</section>
+			<section className="flex flex-col justify-center items-center z-10 w-full">
+				<CallToAction />
+			</section>
+
+
 		</section>
 	);
 }
