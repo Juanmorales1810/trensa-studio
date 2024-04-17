@@ -43,6 +43,7 @@ export default function RootLayout({
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
 					<div className="relative flex flex-col">
+						<div className="absolute h-full w-full bg-[radial-gradient(#bbbbbb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] dark:bg-[radial-gradient(#1b1b1b_1px,transparent_1px)] -z-0"></div>
 						<Navbar />
 						<main className="flex-grow">
 							{children}

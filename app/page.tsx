@@ -55,7 +55,7 @@ export default function Home() {
 					</p>
 				</div>
 			</section>
-			<section className="flex flex-col justify-center items-center w-full max-w-5xl h-auto">
+			<section className="flex flex-col justify-center items-center w-full max-w-5xl h-auto z-10">
 				<h2 className="text-2xl font-semibold pb-4">Un poco de nosotros</h2>
 				<div className="grid auto-rows-[192px] grid-cols-3 gap-4 w-full pb-4">
 					{[...Array(7)].map((_, i) => (
@@ -68,7 +68,8 @@ export default function Home() {
 				</div>
 				<Button>Ver más</Button>
 			</section>
-			<section>
+			<section className="flex flex-col justify-center items-center z-10 w-full">
+				<h2 className="text-2xl font-semibold mb-4">Testimonios</h2>
 				<InfiniteMovingCards items={items} speed="slow" />
 			</section>
 		</section>
