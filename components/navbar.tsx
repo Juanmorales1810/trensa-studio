@@ -48,7 +48,7 @@ export const Navbar = () => {
     // );
 
     return (
-        <NextUINavbar maxWidth="xl" position="sticky">
+        <NextUINavbar maxWidth="xl" position="static" className="fixed">
             <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
                 <NavbarBrand as="li" className="max-w-fit">
                     <NextLink

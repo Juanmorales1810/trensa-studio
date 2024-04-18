@@ -46,7 +46,7 @@ export default function Home() {
 	];
 	return (
 		<section className="flex flex-col w-full items-center gap-10">
-			<section className="relative h-auto min-h-[calc(100vh-64px)] w-full">
+			<section className="relative h-auto min-h-screen w-full">
 				<SwiperHome />
 				<div className="absolute left-[15%] top-1/2 flex flex-col justify-center items-center z-50">
 					<Image src="/logo/trenzaLogo.png" alt="Logo" width={400} className="pl-4 mb-4 rounded-none" />

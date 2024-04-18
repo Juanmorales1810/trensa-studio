@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 .swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: calc(100vh - 64px);
     mask-image: radial-gradient(
         ellipse 80% 100% at 100% -10%,
-        #000 70%,
+        #000 90%,
         transparent 110%
     );
 }
