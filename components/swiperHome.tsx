@@ -35,15 +35,15 @@ export default function SwiperHome() {
                 modules={[EffectCreative, Autoplay]}
                 className="mySwiper"
             >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
+                <SwiperSlide>Imagen de produto 1</SwiperSlide>
+                <SwiperSlide>Imagen de produto 2</SwiperSlide>
+                <SwiperSlide>Imagen de produto 3</SwiperSlide>
+                <SwiperSlide>Imagen de produto 4</SwiperSlide>
+                <SwiperSlide>Imagen de produto 5</SwiperSlide>
+                <SwiperSlide>Imagen de produto 6</SwiperSlide>
+                <SwiperSlide>Imagen de produto 7</SwiperSlide>
+                <SwiperSlide>Imagen de produto 8</SwiperSlide>
+                <SwiperSlide>Imagen de produto 9</SwiperSlide>
             </Swiper>
         </>
     );
