@@ -49,7 +49,7 @@ export default function Home() {
 			<section className="relative h-auto min-h-[calc(100vh-64px)] w-full">
 				<SwiperHome />
 				<div className="absolute left-[15%] top-1/2 flex flex-col justify-center items-center z-50">
-					<Image src="/logo/trenzaLogo.png" width={400} className="pl-4 mb-4 rounded-none" />
+					<Image src="/logo/trenzaLogo.png" alt="Logo" width={400} className="pl-4 mb-4 rounded-none" />
 					<h1 className="text-4xl font-bold text-center mb-1">Welcome to Trenza</h1>
 					<p className="text-lg text-center text-default-500">
 						Next.js template with NextUI

@@ -54,7 +54,7 @@ export const Navbar = () => {
                     <NextLink
                         href="/"
                     >
-                        <Image src="/logo/trenzaLogo.png" width={100} className="rounded-none" />
+                        <Image src="/logo/trenzaLogo.png" alt="Logo Navbar" width={100} className="rounded-none" />
                     </NextLink>
                 </NavbarBrand>
                 <ul className="hidden lg:flex gap-4 justify-start ml-2">
