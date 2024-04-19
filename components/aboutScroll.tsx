@@ -87,22 +87,22 @@ export default function AboutScroll() {
     const control3 = useAnimation();
     const control4 = useAnimation();
 
-    useScrollAnimation({ control: control2, start: 2200, end: 2900 });
-    useScrollAnimation({ control: control3, start: 2900, end: 3700 });
-    useScrollAnimation({ control: control4, start: 3700, end: Infinity });
+    useScrollAnimation({ control: control2, start: 2200, end: 2850 });
+    useScrollAnimation({ control: control3, start: 2851, end: 3650 });
+    useScrollAnimation({ control: control4, start: 3651, end: 4100 });
     useEffect(() => {
         const scrollHandler = () => {
             const scrollY = window.scrollY;
             console.log(scrollY);
 
 
-            if (scrollY <= 2900) {
+            if (scrollY <= 2850) {
                 control1.start("right");
             }
-            if (scrollY > 2900) {
+            if (scrollY > 2851) {
                 control1.start("left");
             }
-            if (scrollY > 3700) {
+            if (scrollY > 3651) {
                 control1.start("right");
             }
         };
@@ -247,13 +247,13 @@ export default function AboutScroll() {
                 <div className="flex flex-col justify-center items-start text-center lg:text-left p-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-amber-300 via-orange-300 to-yellow-500 bg-clip-text text-transparent dark:drop-shadow-[0_0px_7px_rgba(255,165,0,0.75)]"
+                        "p-2 text-6xl font-bold bg-gradient-to-br from-red-500 via-red-600 to-red-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_4px_rgba(255,19,0,0.75)]"
                     >
                         Exploración de Metas y Estilo Personalizado
                     </h3>
                     <p
                         className=
-                        "mt-4 text-xl font-normal lg:text-2xl text-white drop-shadow-[0_0px_7px_rgba(0,0,0,0.95)] dark:drop-shadow-[0_0px_7px_rgba(255,255,255,0.65)]"
+                        "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
 
                     >
                         Comenzamos evaluando tus objetivos y preferencias.
@@ -267,13 +267,13 @@ export default function AboutScroll() {
                 <div className="flex flex-col justify-center items-center text-center lg:text-right p-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-amber-300 via-orange-300 to-yellow-500 bg-clip-text text-transparent dark:drop-shadow-[0_0px_7px_rgba(255,165,0,0.75)]"
+                        "p-2 text-6xl font-bold bg-gradient-to-br from-red-500 via-red-600 to-red-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_4px_rgba(255,19,0,0.75)]"
                     >
                         Inmersión en el Éxito Pasado y Actual
                     </h3>
                     <p
                         className=
-                        "mt-4 text-xl font-normal lg:text-2xl text-white drop-shadow-[0_0px_7px_rgba(0,0,0,0.95)] dark:drop-shadow-[0_0px_7px_rgba(255,255,255,0.65)]"
+                        "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
                     >
                         Exploramos nuestra rica trayectoria de éxitos,
                         inspirándote con historias reales. Te sumergirás en
@@ -320,13 +320,13 @@ export default function AboutScroll() {
                 <div className="flex flex-col justify-center items-start text-center lg:text-left p-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-amber-300 via-orange-300 to-yellow-500 bg-clip-text text-transparent dark:drop-shadow-[0_0px_7px_rgba(255,165,0,0.75)]"
+                        "p-2 text-6xl font-bold bg-gradient-to-br from-red-500 via-red-600 to-red-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_4px_rgba(255,19,0,0.75)]"
                     >
                         Entrenamiento Estelar y Conexión Personalizada
                     </h3>
                     <p
                         className=
-                        "mt-4 text-xl font-normal lg:text-2xl text-white drop-shadow-[0_0px_7px_rgba(0,0,0,0.95)] dark:drop-shadow-[0_0px_7px_rgba(255,255,255,0.65)]"
+                        "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
                     >
                         Experimenta la grandeza a través de nuestros videos
                         exclusivos. Mantenemos una conexión cercana, brindando
