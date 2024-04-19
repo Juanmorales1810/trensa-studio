@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
+import Footer from "@/components/footer";
 
 export const viewport: Viewport = {
 	themeColor: [
@@ -48,17 +49,7 @@ export default function RootLayout({
 						<main className="flex-grow">
 							{children}
 						</main>
-						{/* <footer className="w-full flex items-center justify-center py-3">
-							<Link
-								isExternal
-								className="flex items-center gap-1 text-current"
-								href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-								title="nextui.org homepage"
-							>
-								<span className="text-default-600">Powered by</span>
-								<p className="text-primary">NextUI</p>
-							</Link>
-						</footer> */}
+						<Footer />
 					</div>
 				</Providers>
 			</body>
