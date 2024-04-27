@@ -10,6 +10,7 @@ import { Button } from "@nextui-org/button";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import CallToAction from "@/components/callToAction";
 import AboutScroll from "@/components/aboutScroll";
+import Bento from "@/components/bento";
 
 
 export default function Home() {
@@ -51,24 +52,16 @@ export default function Home() {
 				<SwiperHome />
 				<div className="absolute left-[15%] top-1/2 flex flex-col justify-center items-center z-50">
 					<Image src="/logo/trenzaLogo.png" alt="Logo" width={400} className="pl-4 mb-4 rounded-none" />
-					<h1 className="text-4xl font-bold text-center mb-1">Welcome to Trenza</h1>
-					<p className="text-lg text-center text-default-500">
-						Next.js template with NextUI
-					</p>
+					<h2 className="text-4xl font-bold text-center mb-1">Welcome to Trenza</h2>
+					<h1 className="text-lg text-center text-default-500">
+						Fotografía de Bodas en Chile.
+					</h1>
 				</div>
 			</section>
 			<section className="flex flex-col justify-center items-center w-full max-w-5xl h-auto z-10">
 				<h2 className="text-2xl font-semibold pb-4">Un poco de nosotros</h2>
-				<div className="grid auto-rows-[192px] grid-cols-3 gap-4 w-full pb-4">
-					{[...Array(7)].map((_, i) => (
-						<div
-							key={i}
-							className={`row-span-1 rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900 ${i === 3 || i === 6 ? "col-span-2" : ""
-								}`}
-						></div>
-					))}
-				</div>
-				<Button>Ver más</Button>
+				<Bento />
+				<Button as={Link} href="/portfolio" className="bg-red-600">Ver más</Button>
 			</section>
 			<section className="flex flex-col justify-center items-center z-10 w-full overflow-hidden">
 				<h2 className="text-2xl font-semibold">Testimonios</h2>
