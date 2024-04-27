@@ -12,8 +12,16 @@ import '@/styles/globals.css';
 
 // import required modules
 import { EffectCreative, Autoplay } from 'swiper/modules';
+import Image from 'next/image';
 
 export default function SwiperHome() {
+    const Images = [
+        { id: 1, src: '/home/swiperHome/swiper1.webp' },
+        { id: 2, src: '/home/swiperHome/swiper2.webp' },
+        { id: 3, src: '/home/swiperHome/swiper3.webp' },
+        { id: 4, src: '/home/swiperHome/swiper4.webp' },
+        { id: 5, src: '/home/swiperHome/swiper5.webp' },
+    ]
     return (
         <>
             <Swiper
@@ -35,15 +43,13 @@ export default function SwiperHome() {
                 modules={[EffectCreative, Autoplay]}
                 className="mySwiper"
             >
-                <SwiperSlide>Imagen de produto 1</SwiperSlide>
-                <SwiperSlide>Imagen de produto 2</SwiperSlide>
-                <SwiperSlide>Imagen de produto 3</SwiperSlide>
-                <SwiperSlide>Imagen de produto 4</SwiperSlide>
-                <SwiperSlide>Imagen de produto 5</SwiperSlide>
-                <SwiperSlide>Imagen de produto 6</SwiperSlide>
-                <SwiperSlide>Imagen de produto 7</SwiperSlide>
-                <SwiperSlide>Imagen de produto 8</SwiperSlide>
-                <SwiperSlide>Imagen de produto 9</SwiperSlide>
+
+                {Images.map((image) => (
+                    <SwiperSlide key={image.id}>
+                        <Image src={image.src} alt={`Imagen ${image.id}`} width={1920} height={1080} />
+                    </SwiperSlide>
+                ))}
+
             </Swiper>
         </>
     );
