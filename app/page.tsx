@@ -1,15 +1,10 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { GithubIcon } from "@/components/icons";
-import SwiperHome from "@/components/swiperHome";
-import { Image } from "@nextui-org/image";
-import { Button } from "@nextui-org/button";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import CallToAction from "@/components/callToAction";
 import AboutScroll from "@/components/aboutScroll";
+import SwiperHome from "@/components/swiperHome";
+import { Button } from "@nextui-org/button";
+import { Image } from "@nextui-org/image";
+import { Link } from "@nextui-org/link";
 import Bento from "@/components/bento";
 
 
@@ -47,14 +42,14 @@ export default function Home() {
 		}
 	];
 	return (
-		<section className="flex flex-col w-full items-center gap-10">
+		<section className="flex flex-col w-full items-center gap-10 overflow-hidden md:overflow-visible">
 			<section className="relative h-auto min-h-screen w-full">
 				<SwiperHome />
-				<div className="absolute left-[15%] top-1/2 flex flex-col justify-center items-center z-50">
-					<Image src="/logo/trenzaLogo.png" alt="Logo" width={400} className="pl-4 mb-4 rounded-none" />
-					<h2 className="text-4xl font-bold text-center mb-1">Welcome to Trenza</h2>
+				<div className="flex flex-col justify-center items-center z-30 absolute bottom-10 left-[4%] md:left-[15%] md:top-1/2">
+					<Image src="/logo/TRENZA LOGO PNG.png" alt="Logo" width={400} className="pl-4 mb-4 rounded-none" />
+					<h2 className="text-4xl font-bold text-center mb-1">Bienvenidos a Trenza</h2>
 					<h1 className="text-lg text-center text-default-500">
-						Fotografía de Bodas en Chile.
+						Fotografía y video profesional para bodas
 					</h1>
 				</div>
 			</section>

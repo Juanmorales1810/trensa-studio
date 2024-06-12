@@ -16,11 +16,11 @@ import Image from 'next/image';
 
 export default function SwiperHome() {
     const Images = [
-        { id: 1, src: '/home/swiperHome/swiper1.webp' },
-        { id: 2, src: '/home/swiperHome/swiper2.webp' },
-        { id: 3, src: '/home/swiperHome/swiper3.webp' },
-        { id: 4, src: '/home/swiperHome/swiper4.webp' },
-        { id: 5, src: '/home/swiperHome/swiper5.webp' },
+        { id: 1, src: '/home/bento/bento6.jpg' },
+        { id: 2, src: '/home/bento/bento2.jpg' },
+        { id: 3, src: '/home/bento/bento3.jpg' },
+        { id: 4, src: '/home/bento/bento4.jpg' },
+        { id: 5, src: '/home/bento/bento7.jpg' },
     ]
     return (
         <>
@@ -46,7 +46,7 @@ export default function SwiperHome() {
 
                 {Images.map((image) => (
                     <SwiperSlide key={image.id}>
-                        <Image src={image.src} alt={`Imagen ${image.id}`} width={1920} height={1080} />
+                        <Image className='object-cover h-full' src={image.src} alt={`Imagen ${image.id}`} width={1920} height={1080} />
                     </SwiperSlide>
                 ))}
 
