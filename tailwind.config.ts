@@ -30,7 +30,24 @@ module.exports = {
         },
     },
     darkMode: "class",
-    plugins: [nextui(), addVariablesForColors],
+    plugins: [
+        nextui(),
+        addVariablesForColors,
+        function ({ addUtilities }: { addUtilities: Function }) {
+            const newUtilities = {
+                ".no-scrollbar": {
+                    /* Oculta la barra de desplazamiento en navegadores Webkit (Safari, Chrome) */
+                    "::-webkit-scrollbar": {
+                        display: "none",
+                    },
+                    /* Oculta la barra de desplazamiento en navegadores Firefox */
+                    "-ms-overflow-style": "none" /* IE y Edge */,
+                    "scrollbar-width": "none" /* Firefox */,
+                },
+            };
+            addUtilities(newUtilities);
+        },
+    ],
 };
 function addVariablesForColors({ addBase, theme }: any) {
     let allColors = flattenColorPalette(theme("colors"));
