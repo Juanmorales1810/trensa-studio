@@ -45,27 +45,27 @@ export default function Home() {
 		<section className="flex flex-col w-full items-center gap-10 overflow-hidden md:overflow-visible">
 			<section className="relative h-auto min-h-screen w-full">
 				<SwiperHome />
-				<div className="flex flex-col justify-center items-center z-30 absolute bottom-10 left-[4%] md:left-[15%] md:top-1/2">
-					<Image src="/logo/TRENZA LOGO PNG.png" alt="Logo" width={400} className="pl-4 mb-4 rounded-none" />
-					<h2 className="text-4xl font-bold text-center mb-1">Bienvenidos a Trenza</h2>
-					<h1 className="text-lg text-center text-default-500">
-						Fotografía y video profesional para bodas
+				<div className="flex flex-col justify-center items-center z-30 absolute bottom-10 left-[0%] md:left-[15%] md:top-1/2">
+					<Image src="/logo/Logo sin Nada.jpg" alt="Logo" width={400} className="pl-4 mb-4 rounded-none" />
+					<h2 className="text-3xl font-bold text-center mb-1">Bienvenidos a Trenza Estudio Matrimonios</h2>
+					<h1 className="text-lg text-center text-zinc-700">
+						Capturando Momentos Únicos en La Serena y Santiago
 					</h1>
 				</div>
 			</section>
-			<section className="flex flex-col justify-center items-center w-full max-w-5xl h-auto z-10">
+			<section className="flex flex-col justify-center items-center w-full max-w-5xl h-auto z-10 bg-zinc-200">
 				<h2 className="text-2xl font-semibold pb-4">Un poco de nosotros</h2>
 				<Bento />
 				<Button as={Link} href="/portfolio" className="bg-red-600">Ver más</Button>
 			</section>
-			<section className="flex flex-col justify-center items-center z-10 w-full overflow-hidden">
+			<section className="flex flex-col justify-center items-center z-10 w-full overflow-hidden bg-slate-100">
 				<h2 className="text-2xl font-semibold">Testimonios</h2>
 				<InfiniteMovingCards items={items} speed="slow" />
 			</section>
-			<section className="flex flex-col justify-center items-center z-10 w-full">
+			<section className="flex flex-col justify-center items-center z-10 w-full bg-gray-100">
 				<CallToAction />
 			</section>
-			<section className="flex flex-col justify-center items-center z-10 w-full">
+			<section className="flex flex-col justify-center items-center z-10 w-full bg-neutral-100">
 				<AboutScroll />
 			</section>
 
