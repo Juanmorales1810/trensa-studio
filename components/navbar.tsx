@@ -48,13 +48,13 @@ export const Navbar = () => {
     // );
 
     return (
-        <NextUINavbar maxWidth="xl" position="static" className="fixed">
+        <NextUINavbar maxWidth="xl" position="static" className="fixed bg-zinc-100 dark:bg-zinc-950">
             <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
                 <NavbarBrand as="li" className="max-w-fit">
                     <NextLink
                         href="/"
                     >
-                        <Image src="/logo/trenzaLogo.png" alt="Logo Navbar" width={100} className="rounded-none" />
+                        <Image src="/logo/Logo sin Nada.jpg" alt="Logo Navbar" width={100} className="rounded-none" />
                     </NextLink>
                 </NavbarBrand>
                 <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -123,13 +123,13 @@ export const Navbar = () => {
             </NavbarContent>
 
             <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-                <Link
+                {/* <Link
                     isExternal
                     href={siteConfig.links.github}
                     aria-label="Github"
                 >
                     <GithubIcon className="text-default-500" />
-                </Link>
+                </Link> */}
                 <ThemeSwitch />
                 <NavbarMenuToggle />
             </NavbarContent>
