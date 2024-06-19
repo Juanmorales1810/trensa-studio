@@ -5,12 +5,11 @@ export default function Footer() {
         <footer className="">
             <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="flex justify-center text-teal-600">
-                    <Image src="/logo/trenzaLogo.png" alt="Logo" width={300} className="rounded-none" />
+                    <Image src="/logo/Logo sin Nada.png" alt="Logo" width={300} className="rounded-none" />
                 </div>
 
                 <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum
-                    itaque neque.
+                    Trenza Estudio Matrimonios ofrece servicios de fotografía y video de bodas en La Serena y Santiago. Capturamos los momentos más especiales de tu boda con profesionalismo y creatividad.
                 </p>
 
                 <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
