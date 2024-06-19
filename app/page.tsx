@@ -46,26 +46,27 @@ export default function Home() {
 			<section className="relative h-auto min-h-screen w-full">
 				<SwiperHome />
 				<div className="flex flex-col justify-center items-center z-30 absolute bottom-10 left-[0%] md:left-[15%] md:top-1/2">
-					<Image src="/logo/Logo sin Nada.jpg" alt="Logo" width={400} className="pl-4 mb-4 rounded-none" />
+					<Image src="/logo/Logo sin Nada.png" alt="Logo" width={400} height={124} className="pl-4 mb-4 rounded-none" />
 					<h2 className="text-3xl font-bold text-center mb-1">Bienvenidos a Trenza Estudio Matrimonios</h2>
 					<h1 className="text-lg text-center text-zinc-700">
 						Capturando Momentos Únicos en La Serena y Santiago
 					</h1>
+					<Button radius="full" size="sm" as={Link} href="/portfolio" className="bg-[#7CA4DC] mt-4">Ver más</Button>
 				</div>
 			</section>
-			<section className="flex flex-col justify-center items-center w-full max-w-5xl h-auto z-10 bg-zinc-200">
+			<section className="flex flex-col justify-center items-center w-full max-w-5xl h-auto px-2 z-10">
 				<h2 className="text-2xl font-semibold pb-4">Un poco de nosotros</h2>
 				<Bento />
-				<Button as={Link} href="/portfolio" className="bg-red-600">Ver más</Button>
+				<Button as={Link} href="/portfolio" className="bg-[#7CA4DC]">Ver más</Button>
 			</section>
-			<section className="flex flex-col justify-center items-center z-10 w-full overflow-hidden bg-slate-100">
+			<section className="flex flex-col justify-center items-center z-10 w-full overflow-hidden">
 				<h2 className="text-2xl font-semibold">Testimonios</h2>
 				<InfiniteMovingCards items={items} speed="slow" />
 			</section>
-			<section className="flex flex-col justify-center items-center z-10 w-full bg-gray-100">
+			<section className="flex flex-col justify-center items-center z-10 w-full">
 				<CallToAction />
 			</section>
-			<section className="flex flex-col justify-center items-center z-10 w-full bg-neutral-100">
+			<section className="flex flex-col justify-center items-center z-10 w-full">
 				<AboutScroll />
 			</section>
 
