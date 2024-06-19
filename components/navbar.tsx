@@ -49,14 +49,16 @@ export const Navbar = () => {
 
     return (
         <NextUINavbar maxWidth="xl" position="static" className="fixed bg-zinc-100 dark:bg-zinc-950">
-            <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
-                <NavbarBrand as="li" className="max-w-fit">
+            <NavbarContent className="basis-1/5 w-[100px] h-8" justify="start">
+                <NavbarBrand as="li" className="max-w-fit w-[100px] h-8">
                     <NextLink
                         href="/"
                     >
-                        <Image src="/logo/Logo sin Nada.jpg" alt="Logo Navbar" width={100} className="rounded-none" />
+                        <Image src="/logo/Logo sin Nada.png" alt="Logo Navbar" width={100} height={32} className="rounded-none w-[100px] h-8" />
                     </NextLink>
                 </NavbarBrand>
+            </NavbarContent>
+            <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
                 <ul className="hidden lg:flex gap-4 justify-start ml-2">
                     {siteConfig.navItems.map((item) => (
                         <NavbarItem key={item.href}>
