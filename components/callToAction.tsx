@@ -1,23 +1,30 @@
 import { Button } from "@nextui-org/button";
+import Link from "next/link";
 
 export default function CallToAction() {
     return (
         <section className="w-full">
             <div className="w-full px-4 py-20 mx-auto text-left md:text-center md:w-3/4 lg:w-2/4">
-                <p className="mb-2 text-base font-semibold text-red-600">LLamado a la acción</p>
-                <h2 className="mb-6 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">Algún texto para llamar la atención al cliente y haga click.</h2>
+                <p className="mb-2 text-lg font-semibold text-zinc-700 dark:text-[#7CA4DC]">¡Haz de tu boda en La Serena y Santiago un recuerdo inolvidable!</p>
+                <h2 className="mb-6 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">Reserva ahora con Trenza Estudio Matrimonios y asegura la magia de tu gran día. Ofrecemos fotografía y video profesional,incluyendo tomas con drone y edición avanzada.
+                </h2>
                 <div className="mb-0 space-x-0 md:space-x-2">
                     <Button
-                        color="danger"
+                        as={Link}
+                        href="https://wa.me/+56923748433?text=Hola!%20Me%20gustaria%20hacer%20una%20reserva.%20Tenes%20alguna%20reservacion%20disponible?%20Muchas%20gracias!😊"
+                        className="bg-[#7CA4DC] text-black"
+                        color="default"
                         variant="shadow"
                         endContent={
                             <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                             </svg>
                         }>
-                        Empieza ahora
+                        Quiero un presupuesto
                     </Button>
                     <Button
+                        as={Link}
+                        href="https://wa.me/+56923748433?text=Hola!%20Quisiera%20hablar%20con%20un%20representante."
                         endContent={
                             <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path
@@ -27,7 +34,7 @@ export default function CallToAction() {
                                 />
                             </svg>
                         }>
-                        Has click aquí
+                        Hablar con representante
                     </Button>
                 </div>
             </div>
