@@ -86,24 +86,29 @@ export default function AboutScroll() {
     const control2 = useAnimation();
     const control3 = useAnimation();
     const control4 = useAnimation();
+    const control5 = useAnimation();
 
-    useScrollAnimation({ control: control2, start: 2200, end: 2850 });
-    useScrollAnimation({ control: control3, start: 2851, end: 3650 });
-    useScrollAnimation({ control: control4, start: 3651, end: 4100 });
+    useScrollAnimation({ control: control2, start: 2400, end: 3050 });
+    useScrollAnimation({ control: control3, start: 3051, end: 3850 });
+    useScrollAnimation({ control: control4, start: 3851, end: 4851 });
+    useScrollAnimation({ control: control5, start: 4851, end: 5500 });
     useEffect(() => {
         const scrollHandler = () => {
             const scrollY = window.scrollY;
             console.log(scrollY);
 
 
-            if (scrollY <= 2850) {
+            if (scrollY <= 3050) {
                 control1.start("right");
             }
-            if (scrollY > 2851) {
+            if (scrollY > 3051) {
                 control1.start("left");
             }
-            if (scrollY > 3651) {
+            if (scrollY > 3851) {
                 control1.start("right");
+            }
+            if (scrollY > 4851) {
+                control1.start("left");
             }
         };
 
@@ -223,6 +228,45 @@ export default function AboutScroll() {
                         />
                     </figure>
                 </motion.div>
+                <motion.div
+                    variants={variant}
+                    initial="offscreen"
+                    animate={control5}
+                    className="absolute top-[calc(50%-144px)] left-[calc(50%-210px)] flex flex-col justify-center items-center h-72 w-[420px]"
+                >
+                    <figure>
+                        <Image
+                            isBlurred
+                            width={420}
+                            alt="NextUI hero Image"
+                            src="about/edicion.jpg"
+                        />
+                    </figure>
+                    <figure className="absolute top-[200px] left-[300px] w-48 h-48">
+                        <Image
+                            isBlurred
+                            width={192}
+                            alt="NextUI hero Image"
+                            src="about/next.webp"
+                        />
+                    </figure>
+                    <figure className="absolute top-[190px] left-[120px] w-40 h-40">
+                        <Image
+                            isBlurred
+                            width={160}
+                            alt="NextUI hero Image"
+                            src="about/play.webp"
+                        />
+                    </figure>
+                    <figure className="absolute top-[180px] -left-[90px] w-40 h-40">
+                        <Image
+                            isBlurred
+                            width={160}
+                            alt="NextUI hero Image"
+                            src="about/back.webp"
+                        />
+                    </figure>
+                </motion.div>
             </motion.div>
 
             <div className="relative flex flex-col justify-center items-center w-full h-full min-h-[calc(100vh-116px)] lg:flex-row">
@@ -247,19 +291,16 @@ export default function AboutScroll() {
                 <div className="flex flex-col justify-center items-start text-center lg:text-left p-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-red-500 via-red-600 to-red-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_4px_rgba(255,19,0,0.75)]"
+                        "p-2 text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
-                        Exploración de Metas y Estilo Personalizado
+                        Consulta Personalizada
                     </h3>
                     <p
                         className=
                         "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
 
                     >
-                        Comenzamos evaluando tus objetivos y preferencias.
-                        Juntos, diseñamos un plan personalizado que refleje
-                        nuestra experiencia comprobada en videos de
-                        entrenamiento de última generación.
+                        Exploramos su visión para capturar cada detalle de su boda. Ofrecemos estilos únicos y personalizados. ¡Descargue nuestra guía para saber más!
                     </p>
                 </div>
             </div>
@@ -267,18 +308,15 @@ export default function AboutScroll() {
                 <div className="flex flex-col justify-center items-center text-center lg:text-right p-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-red-500 via-red-600 to-red-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_4px_rgba(255,19,0,0.75)]"
+                        "p-2 text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
-                        Inmersión en el Éxito Pasado y Actual
+                        Cobertura Completa
                     </h3>
                     <p
                         className=
                         "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
                     >
-                        Exploramos nuestra rica trayectoria de éxitos,
-                        inspirándote con historias reales. Te sumergirás en
-                        sesiones de entrenamiento que capturan la esencia de la
-                        fama, equilibrando la ambición con la realidad.
+                        Desde los preparativos hasta la recepción, documentamos cada momento con equipos de alta calidad, incluyendo drones. Obtenga un vistazo completo a nuestros servicios en nuestra guía descargable.
                     </p>
                 </div>
                 <div className="flex justify-center items-center lg:w-1/2">
@@ -320,19 +358,49 @@ export default function AboutScroll() {
                 <div className="flex flex-col justify-center items-start text-center lg:text-left p-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-red-500 via-red-600 to-red-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_4px_rgba(255,19,0,0.75)]"
+                        "p-2 text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
-                        Entrenamiento Estelar y Conexión Personalizada
+                        Estilo, Edición y Postproducción
                     </h3>
                     <p
                         className=
                         "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
                     >
-                        Experimenta la grandeza a través de nuestros videos
-                        exclusivos. Mantenemos una conexión cercana, brindando
-                        apoyo realista y ajustes personalizados. Así, te guiamos
-                        hacia el estrellato en tus propias metas de maratón.
+                        Elija entre varios estilos fotográficos y disfrute de una edición detallada. Incluimos videos, tomas con drone y una postproducción que garantiza álbumes y videos hermosos. ¡Descargue la guía para descubrir nuestras opciones!
                     </p>
+                </div>
+            </div>
+            <div className="relative flex flex-col-reverse justify-center items-center w-full h-full min-h-[calc(100vh-116px)] z-10 lg:flex-row">
+                <div className="flex flex-col justify-center items-center text-center lg:text-right p-4 lg:w-1/2">
+                    <h3
+                        className=
+                        "p-2 text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
+                    >
+                        Entrega y Presupuesto
+                    </h3>
+                    <p
+                        className=
+                        "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
+                    >
+                        Acceso digital exclusivo a sus recuerdos en Google Drive. Ofrecemos paquetes personalizados que se ajustan a su presupuesto. Descargue nuestra guía para conocer todos los detalles y precios.
+                    </p>
+                </div>
+                <div className="flex justify-center items-center lg:w-1/2">
+                    <figure className="lg:hidden">
+                        <Image
+                            isBlurred
+                            width={420}
+                            alt="NextUI hero Image"
+                            src="about/realidad.jpg"
+                        />
+                    </figure>
+                    <Image
+                        isBlurred
+                        width={512}
+                        alt="NextUI hero Image"
+                        src="about/back4.svg"
+                        className="hidden lg:block"
+                    />
                 </div>
             </div>
         </section>
