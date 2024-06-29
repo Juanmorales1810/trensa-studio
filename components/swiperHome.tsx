@@ -46,7 +46,7 @@ export default function SwiperHome() {
 
                 {Images.map((image) => (
                     <SwiperSlide key={image.id}>
-                        <Image className='object-cover w-full h-full' src={image.src} alt={`Imagen ${image.id}`} width={1920} height={1080} />
+                        <Image className='object-cover w-full h-full' src={image.src} alt={`Imagen ${image.id}`} width={1920} height={1080} priority={true} />
                     </SwiperSlide>
                 ))}
 
