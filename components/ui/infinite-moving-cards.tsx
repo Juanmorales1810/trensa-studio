@@ -92,7 +92,7 @@ export const InfiniteMovingCards = ({
                         className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-zinc-700 md:w-[450px] bg-zinc-900 overflow-hidden shadow-lg group"
                         key={item.name + idx}
                     >
-                        <Image src={item.image} alt={item.name} width={500} height={400} className="absolute rounded-none brightness-[0.25] saturate-0 group-hover:saturate-[0.25] group-hover:scale-105 transition-transform" />
+                        <Image src={item.image} alt={item.name} width={450} height={400} className="absolute w-[450px] h-full object-cover rounded-none brightness-[0.25] saturate-0 group-hover:saturate-[0.65] group-hover:scale-105 transition-transform" />
                         <blockquote className="px-8 py-6">
                             <div
                                 aria-hidden="true"
