@@ -6,6 +6,10 @@ import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import Bento from "@/components/bento";
+import Videocard from "@/components/videocard";
+import { Input, Textarea } from "@nextui-org/input";
+import { DatePicker } from "@nextui-org/date-picker";
+import { Checkbox } from "@nextui-org/checkbox";
 
 
 export default function Home() {
@@ -54,7 +58,7 @@ export default function Home() {
 		}
 	];
 	return (
-		<section className="flex flex-col w-full items-center gap-10 overflow-hidden md:overflow-visible">
+		<section className="flex flex-col w-full items-center overflow-hidden md:overflow-visible">
 			<section className="relative h-auto min-h-screen w-full">
 				<SwiperHome />
 				<div className="flex flex-col justify-center items-center z-30 absolute bottom-10 left-[0%] md:left-[15%] md:top-1/2">
@@ -63,15 +67,41 @@ export default function Home() {
 					<h1 className="text-lg text-center text-zinc-700">
 						Capturando Momentos Únicos en La Serena y Santiago
 					</h1>
-					<Button size="sm" as={Link} href="/portfolio" className="bg-[#7CA4DC] mt-4 font-semibold">Contactanos</Button>
+					<Button size="sm" as={Link} href="/portfolio" className="bg-[#7CA4DC] mt-4 font-semibold text-black">Contactanos</Button>
 				</div>
 			</section>
-			<section className="flex flex-col justify-center items-center w-full max-w-5xl h-auto px-2 z-10">
+			<section id="services" data-section="services" className="flex flex-col justify-center items-center z-10 w-full pt-16">
+				<h2 className="text-2xl font-semibold">Nuestros Servicios</h2>
+				<section className="flex flex-wrap max-w-5xl w-full justify-center items-center gap-2 py-10 h-auto md:justify-between md:gap-8">
+					<Videocard
+						srcimg="/service/Comp 1 (0-00-00-10).jpg"
+						srcvid="/service/card1.mp4"
+						title="Fotografía de Matrimonios"
+						subtitle="Detalles sobre los servicios de fotografía, incluyendo sesiones preboda y de compromiso."
+						href="/services"
+					/>
+					<Videocard
+						srcimg="/service/Comp 1 (0-00-00-10).jpg"
+						srcvid="/service/card1.mp4"
+						title="Video de Matrimonios"
+						subtitle="Información sobre la producción de videos de bodas, desde la ceremonia hasta la recepción."
+						href="/services"
+					/>
+					<Videocard
+						srcimg="/service/Comp 1 (0-00-00-10).jpg"
+						srcvid="/service/card1.mp4"
+						title="Cobertura Completa de Bodas"
+						subtitle="Paquetes de servicios que incluyen fotografía y video."
+						href="/services"
+					/>
+				</section>
+			</section>
+			<section id="portfolio" data-section="portfolio" className="flex flex-col justify-center items-center w-full max-w-5xl h-auto px-2 z-10 pt-16">
 				<h2 className="text-2xl font-semibold pb-4">Un poco de nosotros</h2>
 				<Bento />
 				<Button as={Link} href="/portfolio" className="bg-[#7CA4DC] text-black">Ver más</Button>
 			</section>
-			<section className="flex flex-col justify-center items-center z-10 w-full overflow-hidden">
+			<section id="testimonials" data-section="testimonials" className="flex flex-col justify-center items-center z-10 w-full overflow-hidden pt-16">
 				<h2 className="text-2xl font-semibold">Testimonios</h2>
 				<InfiniteMovingCards items={items} speed="slow" />
 			</section>
@@ -80,6 +110,36 @@ export default function Home() {
 			</section>
 			<section className="flex flex-col justify-center items-center z-10 w-full">
 				<AboutScroll />
+			</section>
+			<section id="contact" data-section="contact" className="flex flex-col justify-center items-center z-10 w-full pt-16">
+				<h2 className="text-2xl font-semibold">Contactanos</h2>
+				<section className="flex flex-col-reverse max-w-5xl w-full justify-center items-center gap-8 py-10 h-auto md:items-start md:flex-row md:justify-between md:gap-8">
+					<div className="flex flex-col items-center md:w-1/2 px-2">
+						<p className="text-xl text-center text-pretty md:text-left">
+							Si llegaste hasta acá es porque estás interesado(a) en nuestros servicios de fotografía de matrimonios, nosotros felices de escucharte.
+							<br />
+							<br />
+							Si deseas cotizar fotógrafo de matrimonios, déjanos tus datos y te enviaremos una cotización en un máximo de 24 horas
+						</p>
+						<br />
+						<Image src="/home/sonrisa.jpg" alt="Contacto" width={400} height={400} className="rounded-xl hidden md:block" />
+					</div>
+					<form className="flex flex-col gap-2 md:w-1/2">
+						<Input color="primary" label="Nombre completo" />
+						<Input color="primary" label="Teléfono" />
+						<Input color="primary" label="Mail" />
+						<DatePicker color="primary" label="Fecha del evento" />
+						<Textarea color="primary" label="Tienes alguna consulta?" />
+						<p className="text-lg font-bold">¿Cómo prefieres que nos contactemos?</p>
+						<Checkbox color="primary">
+							Teléfono
+						</Checkbox>
+						<Checkbox color="primary">
+							WhatsApp
+						</Checkbox>
+						<Button type="submit" className="bg-[#7CA4DC] text-black font-semibold">Enviar</Button>
+					</form>
+				</section>
 			</section>
 
 
