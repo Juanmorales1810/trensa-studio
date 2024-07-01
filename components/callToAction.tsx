@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function CallToAction() {
     return (
         <section className="w-full">
-            <div className="w-full px-4 py-20 mx-auto text-left md:text-center md:w-3/4 lg:w-2/4">
+            <div className="w-full px-4 py-20 mx-auto text-center md:w-3/4 lg:w-2/4">
                 <p className="mb-2 text-lg font-semibold text-zinc-700 dark:text-[#7CA4DC]">¡Haz de tu boda en La Serena y Santiago un recuerdo inolvidable!</p>
                 <h2 className="mb-6 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">Reserva ahora con Trenza Estudio Matrimonios y asegura la magia de tu gran día. Ofrecemos fotografía y video profesional,incluyendo tomas con drone y edición avanzada.
                 </h2>
-                <div className="mb-0 space-x-0 md:space-x-2">
+                <div className="mb-0 space-y-3 md:space-x-2">
                     <Button
                         as={Link}
                         href="https://wa.me/+56923748433?text=Hola!%20Me%20gustaria%20hacer%20una%20reserva.%20Tenes%20alguna%20reservacion%20disponible?%20Muchas%20gracias!😊"
