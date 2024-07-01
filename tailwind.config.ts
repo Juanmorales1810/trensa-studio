@@ -47,6 +47,7 @@ module.exports = {
             };
             addUtilities(newUtilities);
         },
+        require("tailwindcss-animated"),
     ],
 };
 function addVariablesForColors({ addBase, theme }: any) {
