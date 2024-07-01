@@ -16,7 +16,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
 	return (
 		<NextUIProvider navigate={router.push}>
-			<>{React.createElement(NextThemesProvider, themeProps, children)}</>
+			<NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
 		</NextUIProvider>
 	);
 }
