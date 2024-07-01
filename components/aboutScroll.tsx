@@ -88,26 +88,26 @@ export default function AboutScroll() {
     const control4 = useAnimation();
     const control5 = useAnimation();
 
-    useScrollAnimation({ control: control2, start: 2400, end: 3050 });
-    useScrollAnimation({ control: control3, start: 3051, end: 3850 });
-    useScrollAnimation({ control: control4, start: 3851, end: 4851 });
-    useScrollAnimation({ control: control5, start: 4851, end: 5500 });
+    useScrollAnimation({ control: control2, start: 3000, end: 3650 });
+    useScrollAnimation({ control: control3, start: 3651, end: 4450 });
+    useScrollAnimation({ control: control4, start: 4451, end: 5451 });
+    useScrollAnimation({ control: control5, start: 5451, end: 6100 });
     useEffect(() => {
         const scrollHandler = () => {
             const scrollY = window.scrollY;
             console.log(scrollY);
 
 
-            if (scrollY <= 3050) {
+            if (scrollY <= 3650) {
                 control1.start("right");
             }
-            if (scrollY > 3051) {
+            if (scrollY > 3651) {
                 control1.start("left");
             }
-            if (scrollY > 3851) {
+            if (scrollY > 4451) {
                 control1.start("right");
             }
-            if (scrollY > 4851) {
+            if (scrollY > 5451) {
                 control1.start("left");
             }
         };
@@ -120,7 +120,7 @@ export default function AboutScroll() {
     }, [control1]);
 
     return (
-        <section className="w-full max-w-6xl px-4">
+        <section className="w-full max-w-6xl">
             <motion.div
                 className="sticky lg:flex justify-center items-center top-[450px] w-1/2 h-full z-20 hidden"
                 variants={variants}
@@ -141,22 +141,6 @@ export default function AboutScroll() {
                             src="about/reunion.jpg"
                         />
                     </figure>
-                    <figure className="absolute -top-[80px] -left-[140px] w-40 h-40">
-                        <Image
-                            isBlurred
-                            width={160}
-                            alt="NextUI hero Image"
-                            src="about/grafico1.webp"
-                        />
-                    </figure>
-                    <figure className="absolute top-[240px] left-[300px] w-48 h-48">
-                        <Image
-                            isBlurred
-                            width={192}
-                            alt="NextUI hero Image"
-                            src="about/grafico2.webp"
-                        />
-                    </figure>
                 </motion.div>
                 <motion.div
                     variants={variant}
@@ -170,22 +154,6 @@ export default function AboutScroll() {
                             width={420}
                             alt="NextUI hero Image"
                             src="about/realidad.jpg"
-                        />
-                    </figure>
-                    <figure className="absolute -top-[80px] left-[300px] w-48 h-48">
-                        <Image
-                            isBlurred
-                            width={192}
-                            alt="NextUI hero Image"
-                            src="about/thumb-up.webp"
-                        />
-                    </figure>
-                    <figure className="absolute top-[200px] -left-[100px] w-40 h-40">
-                        <Image
-                            isBlurred
-                            width={160}
-                            alt="NextUI hero Image"
-                            src="about/camera.webp"
                         />
                     </figure>
                 </motion.div>
@@ -203,30 +171,6 @@ export default function AboutScroll() {
                             src="about/edicion.jpg"
                         />
                     </figure>
-                    <figure className="absolute top-[200px] left-[300px] w-48 h-48">
-                        <Image
-                            isBlurred
-                            width={192}
-                            alt="NextUI hero Image"
-                            src="about/next.webp"
-                        />
-                    </figure>
-                    <figure className="absolute top-[190px] left-[120px] w-40 h-40">
-                        <Image
-                            isBlurred
-                            width={160}
-                            alt="NextUI hero Image"
-                            src="about/play.webp"
-                        />
-                    </figure>
-                    <figure className="absolute top-[180px] -left-[90px] w-40 h-40">
-                        <Image
-                            isBlurred
-                            width={160}
-                            alt="NextUI hero Image"
-                            src="about/back.webp"
-                        />
-                    </figure>
                 </motion.div>
                 <motion.div
                     variants={variant}
@@ -242,34 +186,10 @@ export default function AboutScroll() {
                             src="about/edicion.jpg"
                         />
                     </figure>
-                    <figure className="absolute top-[200px] left-[300px] w-48 h-48">
-                        <Image
-                            isBlurred
-                            width={192}
-                            alt="NextUI hero Image"
-                            src="about/next.webp"
-                        />
-                    </figure>
-                    <figure className="absolute top-[190px] left-[120px] w-40 h-40">
-                        <Image
-                            isBlurred
-                            width={160}
-                            alt="NextUI hero Image"
-                            src="about/play.webp"
-                        />
-                    </figure>
-                    <figure className="absolute top-[180px] -left-[90px] w-40 h-40">
-                        <Image
-                            isBlurred
-                            width={160}
-                            alt="NextUI hero Image"
-                            src="about/back.webp"
-                        />
-                    </figure>
                 </motion.div>
             </motion.div>
 
-            <div className="relative flex flex-col justify-center items-center w-full h-full min-h-[calc(100vh-116px)] lg:flex-row">
+            <div className="relative flex flex-col justify-center items-center w-full h-full md:min-h-[calc(100vh-116px)] lg:flex-row px-2 py-4">
                 <div className="flex justify-center items-center md:w-1/2">
                     <figure className="lg:hidden">
                         <Image
@@ -288,10 +208,10 @@ export default function AboutScroll() {
                         className="hidden lg:block"
                     />
                 </div>
-                <div className="flex flex-col justify-center items-start text-center lg:text-left p-4 lg:w-1/2">
+                <div className="flex flex-col justify-center items-start text-center lg:text-left py-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
+                        "p-2 text-4xl md:text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
                         Consulta Personalizada
                     </h3>
@@ -304,11 +224,11 @@ export default function AboutScroll() {
                     </p>
                 </div>
             </div>
-            <div className="relative flex flex-col-reverse justify-center items-center w-full h-full min-h-[calc(100vh-116px)] z-10 lg:flex-row">
-                <div className="flex flex-col justify-center items-center text-center lg:text-right p-4 lg:w-1/2">
+            <div className="relative flex flex-col-reverse justify-center items-center w-full h-full md:min-h-[calc(100vh-116px)] z-10 lg:flex-row px-2 py-4">
+                <div className="flex flex-col justify-center items-center text-center lg:text-right py-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
+                        "p-2 text-4xl md:text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
                         Cobertura Completa
                     </h3>
@@ -337,7 +257,7 @@ export default function AboutScroll() {
                     />
                 </div>
             </div>
-            <div className="relative flex flex-col justify-center items-center w-full h-full min-h-[calc(100vh-116px)] lg:flex-row">
+            <div className="relative flex flex-col justify-center items-center w-full h-full md:min-h-[calc(100vh-116px)] lg:flex-row px-2 py-4">
                 <div className="flex justify-center items-center lg:w-1/2">
                     <figure className="lg:hidden">
                         <Image
@@ -355,10 +275,10 @@ export default function AboutScroll() {
                         className="hidden lg:block"
                     />
                 </div>
-                <div className="flex flex-col justify-center items-start text-center lg:text-left p-4 lg:w-1/2">
+                <div className="flex flex-col justify-center items-start text-center lg:text-left py-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
+                        "p-2 text-4xl md:text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
                         Estilo, Edición y Postproducción
                     </h3>
@@ -370,11 +290,11 @@ export default function AboutScroll() {
                     </p>
                 </div>
             </div>
-            <div className="relative flex flex-col-reverse justify-center items-center w-full h-full min-h-[calc(100vh-116px)] z-10 lg:flex-row">
-                <div className="flex flex-col justify-center items-center text-center lg:text-right p-4 lg:w-1/2">
+            <div className="relative flex flex-col-reverse justify-center items-center w-full h-full md:min-h-[calc(100vh-116px)] z-10 lg:flex-row px-2 py-4">
+                <div className="flex flex-col justify-center items-center text-center lg:text-right py-4 lg:w-1/2">
                     <h3
                         className=
-                        "p-2 text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
+                        "p-2 text-4xl md:text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
                         Entrega y Presupuesto
                     </h3>
