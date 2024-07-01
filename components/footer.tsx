@@ -1,8 +1,9 @@
 import { Image } from "@nextui-org/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="">
+        <footer className="z-10">
             <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="flex justify-center text-teal-600">
                     <Image src="/logo/Logo sin Nada.png" alt="Logo" width={300} className="rounded-none" />
@@ -14,34 +15,31 @@ export default function Footer() {
 
                 <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
                     <li>
-                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> About </a>
+                        <Link className="text-gray-700 transition hover:text-gray-700/75" href="/#services"> Servicios </Link>
                     </li>
 
                     <li>
-                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Careers </a>
+                        <Link className="text-gray-700 transition hover:text-gray-700/75" href="#"> Portafolio </Link>
                     </li>
 
                     <li>
-                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> History </a>
+                        <Link className="text-gray-700 transition hover:text-gray-700/75" href="#"> Testimonio </Link>
                     </li>
 
                     <li>
-                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Services </a>
+                        <Link className="text-gray-700 transition hover:text-gray-700/75" href="#"> Blogs </Link>
                     </li>
 
                     <li>
-                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Projects </a>
+                        <Link className="text-gray-700 transition hover:text-gray-700/75" href="#"> Contacto </Link>
                     </li>
 
-                    <li>
-                        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Blog </a>
-                    </li>
                 </ul>
 
                 <ul className="mt-12 flex justify-center gap-6 md:gap-8">
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            href="https://www.facebook.com/trenzaestudiomatrimonios"
                             rel="noreferrer"
                             target="_blank"
                             className="text-gray-700 transition hover:text-gray-700/75"
@@ -54,12 +52,12 @@ export default function Footer() {
                                     clipRule="evenodd"
                                 />
                             </svg>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            href="https://www.instagram.com/trenzaestudiofotos/"
                             rel="noreferrer"
                             target="_blank"
                             className="text-gray-700 transition hover:text-gray-700/75"
@@ -72,61 +70,42 @@ export default function Footer() {
                                     clipRule="evenodd"
                                 />
                             </svg>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            href="https://wa.me/+56923748433?text=Hola!%20Quisiera%20hablar%20con%20un%20representante."
                             rel="noreferrer"
                             target="_blank"
                             className="text-gray-700 transition hover:text-gray-700/75"
                         >
-                            <span className="sr-only">Twitter</span>
+                            <span className="sr-only">WhatsApp</span>
                             <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                                />
+                                <path d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z" />
+                                <path fillRule="evenodd" clipRule="evenodd" d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z" />
                             </svg>
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            href="https://www.google.com/search?q=Trenza+Fotograf%C3%ADas+Matrimonios&stick=H4sIAAAAAAAA_-NgU1I1qDAxMUhKTTMyTjE2T7Y0trC0MqgwtUxJTE1NMTE0TU5JNko0XMQqH1KUmleVqOCWX5KfXpSYdnhtYrGCb2JJUWZufl5mfjEAdfxBmksAAAA&hl=es&mat=Cfr3-vZQSq86ElcBezTaAbpJUv8Y2_ZdqvKRp99_OSR-rquOhdfsDWyk-saj1SKpuvJdpnRn_ia3eTDv6JXfIxLk98cRdGQZdi9tnMJSmg9EDguw_3bVUImxhpEfroyXzzU&authuser=0"
                             rel="noreferrer"
                             target="_blank"
                             className="text-gray-700 transition hover:text-gray-700/75"
                         >
-                            <span className="sr-only">GitHub</span>
-                            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    fillRule="evenodd"
-                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                    clipRule="evenodd"
-                                />
+                            <span className="sr-only">Google Maps</span>
+                            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 192 192" aria-hidden="true">
+                                <path strokeWidth="17" d="M96 22a51.88 51.88 0 0 0-36.77 15.303A52.368 52.368 0 0 0 44 74.246c0 16.596 4.296 28.669 20.811 48.898a163.733 163.733 0 0 1 20.053 28.38C90.852 163.721 90.146 172 96 172c5.854 0 5.148-8.279 11.136-20.476a163.723 163.723 0 0 1 20.053-28.38C143.704 102.915 148 90.841 148 74.246a52.37 52.37 0 0 0-15.23-36.943A51.88 51.88 0 0 0 96 22Z" />
+                                <circle cx="96" cy="74" r="20" strokeWidth="17" />
                             </svg>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="#"
-                            rel="noreferrer"
-                            target="_blank"
-                            className="text-gray-700 transition hover:text-gray-700/75"
-                        >
-                            <span className="sr-only">Dribbble</span>
-                            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    fillRule="evenodd"
-                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                                    clipRule="evenodd"
-                                />
-                            </svg>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
+                <div className="mt-12 text-center text-gray-500">
+                    <p>&copy; {new Date().getFullYear()} Trenza Estudio Matrimonios. Todos los derechos reservados.</p>
+                </div>
             </div>
         </footer>
     )

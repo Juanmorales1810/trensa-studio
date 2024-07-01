@@ -7,45 +7,45 @@ export const siteConfig = {
     navItems: [
         {
             label: "Servicios",
-            href: "/services",
+            href: "/#services",
         },
         {
             label: "Portafolio",
-            href: "/portfolio",
+            href: "/#portfolio",
         },
         {
             label: "Testimonios",
-            href: "/testimonials",
+            href: "/#testimonials",
         },
         {
-            label: "Blog",
-            href: "/blog",
+            label: "Blogs",
+            href: "/blogs",
         },
         {
             label: "Contacto",
-            href: "/contact",
+            href: "/#contact",
         },
     ],
     navMenuItems: [
         {
             label: "Servicios",
-            href: "/services",
+            href: "/#services",
         },
         {
             label: "Portafolio",
-            href: "/portfolio",
+            href: "/#portfolio",
         },
         {
             label: "Testimonios",
-            href: "/testimonials",
+            href: "/#testimonials",
         },
         {
-            label: "Blog",
-            href: "/blog",
+            label: "Blogs",
+            href: "/blogs",
         },
         {
             label: "Contacto",
-            href: "/contact",
+            href: "/#contact",
         },
     ],
     links: {
