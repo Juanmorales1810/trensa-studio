@@ -60,7 +60,7 @@ export default function Home() {
 	return (
 		<section className="flex flex-col w-full items-center overflow-hidden md:overflow-visible">
 			<section className="relative h-auto min-h-screen w-full">
-				<div className="h-auto w-full [mask-image:radial-gradient(ellipse_80%_100%_at_100%_-10%,#000_90%,transparent_110%)]">
+				<div className="[mask-image:radial-gradient(ellipse_80%_100%_at_100%_-10%,#000_90%,transparent_110%)]">
 					<SwiperHome />
 				</div>
 				<div className="flex flex-col justify-center items-center z-30 absolute bottom-10 left-[0%] md:left-[15%] md:top-1/2">

@@ -41,11 +41,11 @@ export default function SwiperHome() {
                     disableOnInteraction: false,
                 }}
                 modules={[EffectCreative, Autoplay]}
-                className="mySwiper"
+                className="home-swiper"
             >
 
                 {Images.map((image) => (
-                    <SwiperSlide key={image.id}>
+                    <SwiperSlide key={image.id} className="otro-swiper-slide">
                         <Image className='object-cover w-full h-full' src={image.src} alt={`Imagen ${image.id}`} width={1920} height={1080} priority={true} />
                     </SwiperSlide>
                 ))}

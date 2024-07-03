@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper {
+.home-swiper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
     height: calc(100vh - 64px);
 }
 
-.swiper-slide {
+.home-swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
