@@ -6,12 +6,22 @@ import Image from "next/image";
 import { cn } from "@/utils/cn";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
+interface PortfolioConfig {
+    title: string;
+    location: string;
+    date: string;
+    slug: string;
+    coverImage: string;
+    cardImage: string;
+    porfolioImages: string[];
+    description: string;
+}
 
 export const ParallaxScroll = ({
     images,
     className,
 }: {
-    images: string[];
+    images: PortfolioConfig[];
     className?: string;
 }) => {
     const gridRef = useRef<any>(null);
@@ -49,18 +59,18 @@ export const ParallaxScroll = ({
                             <div className="absolute flex flex-col justify-end items-start px-4 py-2 h-80 w-full z-30">
                                 <div className="flex w-full justify-between">
                                     <div className="text-left text-zinc-50">
-                                        <h2>titulo</h2>
-                                        <p>breve descripción</p>
-                                        <p>fecha</p>
+                                        <h2 className="font-bold text-lg">{el.title}</h2>
+                                        <p className="font-semibold text-sm">{el.location}</p>
+                                        <p className="text-xs">{el.date}</p>
                                     </div>
                                     <div className="items-end pt-9">
-                                        <Button as={Link} href="#" variant="shadow" color="primary" size="sm">Ver más</Button>
+                                        <Button as={Link} href={`/portfolio/${el.slug}`} variant="shadow" color="primary" size="sm">Ver más</Button>
                                     </div>
                                 </div>
                             </div>
                             <Image
-                                src={el}
-                                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0 [mask-image:radial-gradient(ellipse_140%_95%_at_100%_-10%,#000_10%,transparent_110%)] z-20 group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                                src={el.cardImage}
+                                className="h-80 w-full object-cover object-center gap-10 !m-0 !p-0 [mask-image:radial-gradient(ellipse_140%_95%_at_100%_-10%,#000_10%,transparent_110%)] z-20 group-hover:scale-105 transition-transform duration-300 ease-in-out"
                                 height="400"
                                 width="400"
                                 alt="thumbnail"
@@ -78,18 +88,18 @@ export const ParallaxScroll = ({
                             <div className="absolute flex flex-col justify-end items-start px-4 py-2 h-80 w-full z-30">
                                 <div className="flex w-full justify-between">
                                     <div className="text-left text-zinc-50">
-                                        <h2>titulo</h2>
-                                        <p>breve descripción</p>
-                                        <p>fecha</p>
+                                        <h2 className="font-bold text-lg">{el.title}</h2>
+                                        <p className="font-semibold text-sm">{el.location}</p>
+                                        <p className="text-xs">{el.date}</p>
                                     </div>
                                     <div className="items-end pt-9">
-                                        <Button as={Link} href="#" variant="shadow" color="primary" size="sm">Ver más</Button>
+                                        <Button as={Link} href={`/portfolio/${el.slug}`} variant="shadow" color="primary" size="sm">Ver más</Button>
                                     </div>
                                 </div>
                             </div>
                             <Image
-                                src={el}
-                                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0 [mask-image:radial-gradient(ellipse_140%_95%_at_100%_-10%,#000_10%,transparent_110%)] z-20 group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                                src={el.cardImage}
+                                className="h-80 w-full object-cover object-center gap-10 !m-0 !p-0 [mask-image:radial-gradient(ellipse_140%_95%_at_100%_-10%,#000_10%,transparent_110%)] z-20 group-hover:scale-105 transition-transform duration-300 ease-in-out"
                                 height="400"
                                 width="400"
                                 alt="thumbnail"
@@ -107,18 +117,18 @@ export const ParallaxScroll = ({
                             <div className="absolute flex flex-col justify-end items-start px-4 py-2 h-80 w-full z-30">
                                 <div className="flex w-full justify-between">
                                     <div className="text-left text-zinc-50">
-                                        <h2>titulo</h2>
-                                        <p>breve descripción</p>
-                                        <p>fecha</p>
+                                        <h2 className="font-bold text-lg">{el.title}</h2>
+                                        <p className="font-semibold text-sm">{el.location}</p>
+                                        <p className="text-xs">{el.date}</p>
                                     </div>
                                     <div className="items-end pt-9">
-                                        <Button as={Link} href="#" variant="shadow" color="primary" size="sm">Ver más</Button>
+                                        <Button as={Link} href={`/portfolio/${el.slug}`} variant="shadow" color="primary" size="sm">Ver más</Button>
                                     </div>
                                 </div>
                             </div>
                             <Image
-                                src={el}
-                                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0 [mask-image:radial-gradient(ellipse_140%_95%_at_100%_-10%,#000_10%,transparent_110%)] z-20 group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                                src={el.cardImage}
+                                className="h-80 w-full object-cover object-center gap-10 !m-0 !p-0 [mask-image:radial-gradient(ellipse_140%_95%_at_100%_-10%,#000_10%,transparent_110%)] z-20 group-hover:scale-105 transition-transform duration-300 ease-in-out"
                                 height="400"
                                 width="400"
                                 alt="thumbnail"
