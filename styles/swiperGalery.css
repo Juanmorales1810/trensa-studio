@@ -1,9 +1,8 @@
-/* .swiper {
-    width: 80%;
-    height: 300px;
+.swiper {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-} */
+}
 
 .swiper-slide {
     background-size: contain;

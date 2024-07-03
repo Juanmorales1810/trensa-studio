@@ -34,7 +34,7 @@ export default function SwiperGalery(props: SwiperGaleryProps) {
             >
                 {props.images.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <div className='w-auto h-auto'>
+                        <div>
                             <Image src={image} alt='Imágenes de la galería' classNames={{
                                 img: 'h-auto object-contain',
                             }} />
