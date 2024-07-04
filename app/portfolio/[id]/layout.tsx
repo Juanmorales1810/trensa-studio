@@ -1,18 +1,12 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 import { portfolioDB } from "@/config/portfolio";
 
-interface params {
-    params: {
-        id: string;
-    }
-}
 type Props = {
     params: { id: string }
-    searchParams: { [key: string]: string | string[] | undefined }
 }
 
 export async function generateMetadata(
-    { params, searchParams }: Props,
+    { params }: Props,
     parent: ResolvingMetadata
 ): Promise<Metadata> {
     // read route params
@@ -20,9 +14,6 @@ export async function generateMetadata(
 
     // fetch data
     const foundPorfolio = portfolioDB.find((blog) => blog.slug === id);
-
-    // optionally access and extend (rather than replace) parent metadata
-    const previousImages = (await parent).openGraph?.images || []
 
     return {
         title: foundPorfolio?.title,
@@ -34,10 +25,8 @@ export async function generateMetadata(
 }
 
 export default function PortfolioIdLayout({
-    params,
     children,
 }: {
-    params: params;
     children: React.ReactNode;
 }) {
     return (
