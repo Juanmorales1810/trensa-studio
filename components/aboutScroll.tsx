@@ -1,19 +1,21 @@
 "use client";
 
 import { motion, useAnimation, Variants } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Image } from "@nextui-org/image";
 
 interface ScrollAnimationProps {
     control: any;
-    start: number;
-    end: number;
+    startOffset: number;
+    endOffset: number;
 }
 
-const useScrollAnimation = ({ control, start, end }: ScrollAnimationProps) => {
+const useScrollAnimation = ({ control, startOffset, endOffset, }: ScrollAnimationProps) => {
     useEffect(() => {
         const scrollHandler = () => {
             const scrollY = window.scrollY;
+            const start = startOffset;
+            const end = endOffset;
 
             if (scrollY >= start && scrollY <= end) {
                 control.start("onscreen");
@@ -27,7 +29,7 @@ const useScrollAnimation = ({ control, start, end }: ScrollAnimationProps) => {
         return () => {
             window.removeEventListener("scroll", scrollHandler);
         };
-    }, [control, start, end]);
+    }, [control, startOffset, endOffset]);
 };
 
 const variants: Variants = {
@@ -82,32 +84,52 @@ const variant: Variants = {
 };
 
 export default function AboutScroll() {
+    const [windowHeight, setWindowHeight] = useState<number>(typeof window !== 'undefined' ? window.innerHeight : 0);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowHeight(window.innerHeight);
+        };
+
+        // Escuchar el evento de cambio de tamaño
+        window.addEventListener('resize', handleResize);
+
+        // Limpiar el evento cuando el componente se desmonte
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     const control1 = useAnimation();
     const control2 = useAnimation();
     const control3 = useAnimation();
     const control4 = useAnimation();
     const control5 = useAnimation();
 
-    useScrollAnimation({ control: control2, start: 3000, end: 3650 });
-    useScrollAnimation({ control: control3, start: 3651, end: 4450 });
-    useScrollAnimation({ control: control4, start: 4451, end: 5451 });
-    useScrollAnimation({ control: control5, start: 5451, end: 6100 });
+    // Usa los hooks fuera de condicionales
+    useScrollAnimation({ control: control2, startOffset: 1789 + windowHeight, endOffset: 1789 + windowHeight * 2 });
+    useScrollAnimation({ control: control3, startOffset: 1790 + windowHeight * 2, endOffset: 1789 + windowHeight * 3 });
+    useScrollAnimation({ control: control4, startOffset: 1790 + windowHeight * 3, endOffset: 1789 + windowHeight * 4 });
+    useScrollAnimation({ control: control5, startOffset: 1790 + windowHeight * 4, endOffset: 1389 + windowHeight * 5 });
+
+    console.log("Tamaño de ventana:", windowHeight);
+
     useEffect(() => {
         const scrollHandler = () => {
             const scrollY = window.scrollY;
             console.log(scrollY);
+            console.log("Tamaño de ventana:", windowHeight);
 
-
-            if (scrollY <= 3650) {
+            if (scrollY <= 1789 + windowHeight * 2) {
                 control1.start("right");
             }
-            if (scrollY > 3651) {
+            if (scrollY > 1790 + windowHeight * 2) {
                 control1.start("left");
             }
-            if (scrollY > 4451) {
+            if (scrollY > 1790 + windowHeight * 3) {
                 control1.start("right");
             }
-            if (scrollY > 5451) {
+            if (scrollY > 1790 + windowHeight * 4) {
                 control1.start("left");
             }
         };
@@ -117,12 +139,12 @@ export default function AboutScroll() {
         return () => {
             window.removeEventListener("scroll", scrollHandler);
         };
-    }, [control1]);
+    }, [control1, windowHeight]);
 
     return (
         <section className="w-full max-w-6xl">
             <motion.div
-                className="sticky lg:flex justify-center items-center top-[450px] w-1/2 h-full z-20 hidden"
+                className="sticky lg:flex justify-center items-center top-[50%] w-1/2 h-full z-20 hidden"
                 variants={variants}
                 initial="right"
                 animate={control1}
