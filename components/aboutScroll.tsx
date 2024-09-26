@@ -110,7 +110,7 @@ export default function AboutScroll() {
     useScrollAnimation({ control: control2, startOffset: 1789 + windowHeight, endOffset: 1789 + windowHeight * 2 });
     useScrollAnimation({ control: control3, startOffset: 1790 + windowHeight * 2, endOffset: 1789 + windowHeight * 3 });
     useScrollAnimation({ control: control4, startOffset: 1790 + windowHeight * 3, endOffset: 1789 + windowHeight * 4 });
-    useScrollAnimation({ control: control5, startOffset: 1790 + windowHeight * 4, endOffset: 1389 + windowHeight * 5 });
+    useScrollAnimation({ control: control5, startOffset: 1790 + windowHeight * 4, endOffset: (1789 - (windowHeight / 5)) + windowHeight * 5 });
 
     console.log("Tamaño de ventana:", windowHeight);
 
