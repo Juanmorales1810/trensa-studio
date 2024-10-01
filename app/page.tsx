@@ -3,6 +3,7 @@ import CallToAction from "@/components/callToAction";
 import AboutScroll from "@/components/aboutScroll";
 import SwiperHome from "@/components/swiperHome";
 import Videocard from "@/components/videocard";
+import Acordeon from "@/components/acordeon";
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
@@ -134,8 +135,18 @@ export default function Home() {
 					<Form />
 				</section>
 			</section>
-
-
+			<section className="flex flex-col justify-center items-center z-10 w-full max-w-3xl">
+				<h2 className="text-2xl font-semibold my-10">Preguntas frecuentes</h2>
+				<Acordeon />
+			</section>
+			<section className="grid items-center justify-center grid-cols-1 px-4 py-24 text-center lg:grid-cols-3">
+				<div className="col-auto lg:col-start-2">
+					<p className="mb-2 text-2xl font-semibold text-primary">Descarga nuestra guía completa de servicios</p>
+					<h2 className="mb-6 font-serif text-3xl font-normal tracking-tight md:leading-tight md:text-4xl md:mb-6">y conoce todos los detalles sobre cómo
+						podemos capturar tu boda de una manera única y especial.</h2>
+					<Button size="sm" as={Link} href="/Curso Marketing Bodas.pdf" target="_blank" className="bg-[#7CA4DC] mt-4 font-semibold text-black">Descargar curso</Button>
+				</div>
+			</section>
 		</section>
 	);
 }
