@@ -2,14 +2,12 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import CallToAction from "@/components/callToAction";
 import AboutScroll from "@/components/aboutScroll";
 import SwiperHome from "@/components/swiperHome";
+import Videocard from "@/components/videocard";
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import Bento from "@/components/bento";
-import Videocard from "@/components/videocard";
-import { Input, Textarea } from "@nextui-org/input";
-import { DatePicker } from "@nextui-org/date-picker";
-import { Checkbox } from "@nextui-org/checkbox";
+import Form from "@/components/form";
 
 
 export default function Home() {
@@ -65,35 +63,41 @@ export default function Home() {
 				</div>
 				<div className="flex flex-col justify-center items-center z-30 absolute bottom-10 left-[0%] md:left-[15%] md:top-1/2">
 					<Image src="/logo/Logo sin Nada.png" alt="Logo" width={400} height={124} className="pl-4 mb-4 rounded-none" />
-					<h2 className="text-3xl font-bold text-center mb-1">Bienvenidos a Trenza Estudio Matrimonios</h2>
-					<h1 className="text-lg text-center text-zinc-700">
-						Capturando Momentos Únicos en La Serena y Santiago
-					</h1>
+					<h1 className="text-3xl font-bold text-center mb-1 w-full max-w-2xl">Fotografía y Video Profesional para Bodas y Matrimonios en La Serena y Santiago</h1>
+					<p className="text-lg text-center text-zinc-700 w-full max-w-2xl">
+						Capturamos cada momento especial de tu boda, desde los preparativos hasta la
+						celebración, con un enfoque único y emotivo. ¡Consulta nuestros servicios y personaliza tu
+						experiencia!
+					</p>
 					<Button size="sm" as={Link} href="/portfolio" className="bg-[#7CA4DC] mt-4 font-semibold text-black">Contactanos</Button>
 				</div>
 			</section>
 			<section id="services" data-section="services" className="flex flex-col justify-center items-center z-10 w-full pt-16">
-				<h2 className="text-2xl font-semibold">Nuestros Servicios</h2>
+				<h2 className="text-2xl font-semibold">Servicios Principales Fotografía Matrimonios</h2>
+				<p className="text-lg text-center text-zinc-700 w-full max-w-2xl">
+					Preservamos los momentos más bellos de tu día especial. Ofrecemos sesiones fotográficas
+					en un estilo que se ajusta a tu visión: documental, clásico o artístico.
+				</p>
 				<section className="flex flex-wrap max-w-5xl w-full justify-center items-center gap-2 py-10 h-auto md:justify-between md:gap-8">
 					<Videocard
 						srcimg="/service/Comp 1 (0-00-00-10).jpg"
 						srcvid="/service/card1.mp4"
-						title="Fotografía de Matrimonios"
-						subtitle="Detalles sobre los servicios de fotografía, incluyendo sesiones preboda y de compromiso."
+						title="Registro completo de la boda"
+						subtitle=""
 						href="/services"
 					/>
 					<Videocard
 						srcimg="/service/Comp 1 (0-00-00-10).jpg"
 						srcvid="/service/card1.mp4"
-						title="Video de Matrimonios"
-						subtitle="Información sobre la producción de videos de bodas, desde la ceremonia hasta la recepción."
+						title="Sesión de fotos con novios e invitados"
+						subtitle=""
 						href="/services"
 					/>
 					<Videocard
 						srcimg="/service/Comp 1 (0-00-00-10).jpg"
 						srcvid="/service/card1.mp4"
-						title="Cobertura Completa de Bodas"
-						subtitle="Paquetes de servicios que incluyen fotografía y video."
+						title="Fotografía de preparativos y ceremonia"
+						subtitle=""
 						href="/services"
 					/>
 				</section>
@@ -111,6 +115,7 @@ export default function Home() {
 				<CallToAction />
 			</section>
 			<section className="flex flex-col justify-center items-center z-10 w-full">
+				<h2 className="text-2xl font-semibold">Detalles de Nuestros Servicios</h2>
 				<AboutScroll />
 			</section>
 			<section id="contact" data-section="contact" className="flex flex-col justify-center items-center z-10 w-full pt-16">
@@ -126,21 +131,7 @@ export default function Home() {
 						<br />
 						<Image src="/home/sonrisa.jpg" alt="Contacto" width={400} height={400} className="rounded-xl hidden md:block" />
 					</div>
-					<form className="flex flex-col gap-2 md:w-1/2">
-						<Input color="primary" label="Nombre completo" />
-						<Input color="primary" label="Teléfono" />
-						<Input color="primary" label="Mail" />
-						<DatePicker color="primary" label="Fecha del evento" />
-						<Textarea color="primary" label="Tienes alguna consulta?" />
-						<p className="text-lg font-bold">¿Cómo prefieres que nos contactemos?</p>
-						<Checkbox color="primary">
-							Teléfono
-						</Checkbox>
-						<Checkbox color="primary">
-							WhatsApp
-						</Checkbox>
-						<Button type="submit" className="bg-[#7CA4DC] text-black font-semibold">Enviar</Button>
-					</form>
+					<Form />
 				</section>
 			</section>
 
