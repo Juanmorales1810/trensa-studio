@@ -159,8 +159,8 @@ export default function AboutScroll() {
                         <Image
                             isBlurred
                             width={420}
-                            alt="NextUI hero Image"
-                            src="about/reunion.jpg"
+                            alt="Novios intercambiando votos en ceremonia de boda en Santiago de Chile"
+                            src="about/aboutScroll-1.webp"
                         />
                     </figure>
                 </motion.div>
@@ -174,8 +174,8 @@ export default function AboutScroll() {
                         <Image
                             isBlurred
                             width={420}
-                            alt="NextUI hero Image"
-                            src="about/realidad.jpg"
+                            alt="Novios caminando hacia el altar en una boda al aire libre en La Serena"
+                            src="about/aboutScroll-2.webp"
                         />
                     </figure>
                 </motion.div>
@@ -189,8 +189,8 @@ export default function AboutScroll() {
                         <Image
                             isBlurred
                             width={420}
-                            alt="NextUI hero Image"
-                            src="about/edicion.jpg"
+                            alt="Sesión de fotos de matrimonio en la playa de La Serena al atardecer"
+                            src="about/aboutScroll-3.webp"
                         />
                     </figure>
                 </motion.div>
@@ -204,8 +204,8 @@ export default function AboutScroll() {
                         <Image
                             isBlurred
                             width={420}
-                            alt="NextUI hero Image"
-                            src="about/edicion.jpg"
+                            alt="Fotógrafo de bodas en La Serena capturando el primer baile de los novios"
+                            src="about/aboutScroll-4.webp"
                         />
                     </figure>
                 </motion.div>
@@ -217,8 +217,8 @@ export default function AboutScroll() {
                         <Image
                             isBlurred
                             width={420}
-                            alt="NextUI hero Image"
-                            src="about/reunion.jpg"
+                            alt="Novios intercambiando votos en ceremonia de boda en Santiago de Chile"
+                            src="about/aboutScroll-1.webp"
                         />
                     </figure>
 
@@ -242,7 +242,8 @@ export default function AboutScroll() {
                         "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
 
                     >
-                        Exploramos su visión para capturar cada detalle de su boda. Ofrecemos estilos únicos y personalizados. ¡Descargue nuestra guía para saber más!
+                        Sabemos que cada boda es única. Ofrecemos una consulta inicial para conocer tu visión y
+                        tus preferencias. Diseñamos un servicio completamente adaptado a lo que deseas.
                     </p>
                 </div>
             </div>
@@ -252,13 +253,15 @@ export default function AboutScroll() {
                         className=
                         "p-2 text-4xl md:text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
-                        Cobertura Completa
+                        Estilo, Edición y Postproducción
                     </h3>
                     <p
                         className=
                         "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
                     >
-                        Desde los preparativos hasta la recepción, documentamos cada momento con equipos de alta calidad, incluyendo drones. Obtenga un vistazo completo a nuestros servicios en nuestra guía descargable.
+                        Elige entre diferentes estilos de fotografía y video. Nuestro equipo se encargará de la
+                        edición y postproducción para que cada imagen y video refleje la belleza de tu día.
+                        Incluimos drones para una perspectiva aérea.
                     </p>
                 </div>
                 <div className="flex justify-center items-center lg:w-1/2">
@@ -266,8 +269,8 @@ export default function AboutScroll() {
                         <Image
                             isBlurred
                             width={420}
-                            alt="NextUI hero Image"
-                            src="about/realidad.jpg"
+                            alt="Novios caminando hacia el altar en una boda al aire libre en La Serena"
+                            src="about/aboutScroll-2.webp"
                         />
                     </figure>
                     <Image
@@ -285,8 +288,8 @@ export default function AboutScroll() {
                         <Image
                             isBlurred
                             width={420}
-                            alt="NextUI hero Image"
-                            src="about/edicion.jpg"
+                            alt="Sesión de fotos de matrimonio en la playa de La Serena al atardecer"
+                            src="about/aboutScroll-3.webp"
                         />
                     </figure>
                     <Image
@@ -302,13 +305,14 @@ export default function AboutScroll() {
                         className=
                         "p-2 text-4xl md:text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
-                        Estilo, Edición y Postproducción
+                        Entrega Digital en Google Drive
                     </h3>
                     <p
                         className=
                         "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
                     >
-                        Elija entre varios estilos fotográficos y disfrute de una edición detallada. Incluimos videos, tomas con drone y una postproducción que garantiza álbumes y videos hermosos. ¡Descargue la guía para descubrir nuestras opciones!
+                        Ofrecemos acceso exclusivo a todos tus recuerdos en una nube digital (Google Drive),
+                        donde siempre podrás descargar y compartir tus fotos y videos de alta calidad.
                     </p>
                 </div>
             </div>
@@ -318,13 +322,15 @@ export default function AboutScroll() {
                         className=
                         "p-2 text-4xl md:text-6xl font-bold bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-400 bg-clip-text text-transparent dark:drop-shadow-[0_0px_8px_rgba(0,100,125,0.75)]"
                     >
-                        Entrega y Presupuesto
+                        Paquetes Personalizados y Precios
                     </h3>
                     <p
                         className=
                         "mt-4 text-xl font-normal lg:text-2xl text-zinc-900 dark:text-white"
                     >
-                        Acceso digital exclusivo a sus recuerdos en Google Drive. Ofrecemos paquetes personalizados que se ajustan a su presupuesto. Descargue nuestra guía para conocer todos los detalles y precios.
+                        Contamos con diferentes paquetes que se ajustan a tu presupuesto. Puedes personalizar el
+                        paquete que más te guste o combinar nuestros servicios de fotografía y video para obtener
+                        la mejor experiencia.
                     </p>
                 </div>
                 <div className="flex justify-center items-center lg:w-1/2">
@@ -332,8 +338,8 @@ export default function AboutScroll() {
                         <Image
                             isBlurred
                             width={420}
-                            alt="NextUI hero Image"
-                            src="about/realidad.jpg"
+                            alt="Fotógrafo de bodas en La Serena capturando el primer baile de los novios"
+                            src="about/aboutScroll-4.webp"
                         />
                     </figure>
                     <Image
