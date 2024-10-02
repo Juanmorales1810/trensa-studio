@@ -16,11 +16,11 @@ import Image from 'next/image';
 
 export default function SwiperHome() {
     const Images = [
-        { id: 1, src: '/home/bento/bento6.jpg' },
-        { id: 2, src: '/home/bento/bento2.jpg' },
-        { id: 3, src: '/home/bento/bento3.jpg' },
-        { id: 4, src: '/home/bento/bento4.jpg' },
-        { id: 5, src: '/home/bento/bento7.jpg' },
+        { id: 1, webp: '/home/swiperHome/swiper-1.webp', small: '/home/swiperHome/swiper-small-1.webp' },
+        { id: 2, webp: '/home/swiperHome/swiper-2.webp', small: '/home/swiperHome/swiper-small-2.webp' },
+        { id: 3, webp: '/home/swiperHome/swiper-3.webp', small: '/home/swiperHome/swiper-small-3.webp' },
+        { id: 4, webp: '/home/swiperHome/swiper-4.webp', small: '/home/swiperHome/swiper-small-4.webp' },
+        { id: 5, webp: '/home/swiperHome/swiper-5.webp', small: '/home/swiperHome/swiper-small-5.webp' },
     ]
     return (
         <>
@@ -46,7 +46,11 @@ export default function SwiperHome() {
 
                 {Images.map((image) => (
                     <SwiperSlide key={image.id} className="otro-swiper-slide">
-                        <Image className='object-cover w-full h-full' src={image.src} alt={`Imagen ${image.id}`} width={1920} height={1080} priority={true} />
+                        <picture>
+                            <source srcSet={image.webp} type="image/webp" media="(width >= 800px)" />
+                            <source srcSet={image.small} type="image/jpeg" media="(width <= 800px)" />
+                            <Image className='object-cover w-full h-full' src={image.webp} alt={`Imagen ${image.id}`} width={1920} height={1080} priority={true} />
+                        </picture>
                     </SwiperSlide>
                 ))}
 

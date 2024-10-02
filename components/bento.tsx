@@ -4,38 +4,31 @@ export default function Bento() {
     const contenido = [
         {
             title: "Fotografía",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc nec ex luctus elementum. Nunc nec ex luctus elementum.",
-            image: "/home/bento/bento1.jpg"
+            image: "/home/bento/bento1.webp"
         },
         {
             title: "Diseño",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc nec ex luctus elementum. Nunc nec ex luctus elementum.",
-            image: "/home/bento/bento2.jpg"
+            image: "/home/bento/bento2.webp"
         },
         {
             title: "Desarrollo Web",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc nec ex luctus elementum. Nunc nec ex luctus elementum.",
-            image: "/home/bento/bento3.jpg"
+            image: "/home/bento/bento3.webp"
         },
         {
             title: "Marketing Digital",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc nec ex luctus elementum. Nunc nec ex luctus elementum.",
-            image: "/home/bento/bento4.jpg"
+            image: "/home/bento/bento4.webp"
         },
         {
             title: "Social Media",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc nec ex luctus elementum. Nunc nec ex luctus elementum.",
-            image: "/home/bento/bento5.jpg"
+            image: "/home/bento/bento5.webp"
         },
         {
             title: "SEO",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc nec ex luctus elementum. Nunc nec ex luctus elementum.",
-            image: "/home/bento/bento6.jpg"
+            image: "/home/bento/bento6.webp"
         },
         {
             title: "Publicidad",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc nec ex luctus elementum. Nunc nec ex luctus elementum.",
-            image: "/home/bento/bento7.jpg"
+            image: "/home/bento/bento7.webp"
         }
     ]
     return (
