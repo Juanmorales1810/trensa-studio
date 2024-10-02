@@ -2,7 +2,6 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import CallToAction from "@/components/callToAction";
 import AboutScroll from "@/components/aboutScroll";
 import SwiperHome from "@/components/swiperHome";
-import Videocard from "@/components/videocard";
 import Acordeon from "@/components/acordeon";
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
@@ -64,43 +63,44 @@ export default function Home() {
 				</div>
 				<div className="flex flex-col justify-center items-center z-30 absolute bottom-10 left-[0%] md:left-[15%] md:top-1/2">
 					<Image src="/logo/Logo sin Nada.png" alt="Logo" width={400} height={124} className="pl-4 mb-4 rounded-none" />
-					<h1 className="text-3xl font-bold text-center mb-1 w-full max-w-2xl">Fotografía y Video Profesional para Bodas y Matrimonios en La Serena y Santiago</h1>
-					<p className="text-lg text-center text-zinc-700 w-full max-w-2xl">
+					<h1 className="text-3xl font-bold text-center mb-1 w-full max-w-2xl hidden md:block">Fotografía y Video Profesional para Bodas y Matrimonios en La Serena y Santiago</h1>
+					<p className="text-lg text-center text-zinc-700 w-full max-w-2xl hidden md:block">
 						Capturamos cada momento especial de tu boda, desde los preparativos hasta la
 						celebración, con un enfoque único y emotivo. ¡Consulta nuestros servicios y personaliza tu
 						experiencia!
 					</p>
+					<p className="text-3xl font-bold text-center mb-1 w-full max-w-2xl md:hidden">Bienvenidos a Trenza matrimonios</p>
 					<Button size="sm" as={Link} href="/portfolio" className="bg-[#7CA4DC] mt-4 font-semibold text-black">Contactanos</Button>
 				</div>
 			</section>
-			<section id="services" data-section="services" className="flex flex-col justify-center items-center z-10 w-full pt-16">
-				<h2 className="text-2xl font-semibold">Servicios Principales Fotografía Matrimonios</h2>
+			<section id="services" data-section="services" className="flex flex-col justify-center items-center z-10 w-full pt-16 px-2">
+				<h2 className="text-2xl font-semibold text-center">Servicios Principales Fotografía Matrimonios</h2>
 				<p className="text-lg text-center text-zinc-700 w-full max-w-2xl">
 					Preservamos los momentos más bellos de tu día especial. Ofrecemos sesiones fotográficas
 					en un estilo que se ajusta a tu visión: documental, clásico o artístico.
 				</p>
 				<section className="flex flex-wrap max-w-5xl w-full justify-center items-center gap-2 py-10 h-auto md:justify-between md:gap-8">
-					<Videocard
-						srcimg="/service/Comp 1 (0-00-00-10).jpg"
-						srcvid="/service/card1.mp4"
-						title="Registro completo de la boda"
-						subtitle=""
-						href="/services"
-					/>
-					<Videocard
-						srcimg="/service/Comp 1 (0-00-00-10).jpg"
-						srcvid="/service/card1.mp4"
-						title="Sesión de fotos con novios e invitados"
-						subtitle=""
-						href="/services"
-					/>
-					<Videocard
-						srcimg="/service/Comp 1 (0-00-00-10).jpg"
-						srcvid="/service/card1.mp4"
-						title="Fotografía de preparativos y ceremonia"
-						subtitle=""
-						href="/services"
-					/>
+					<article className="relative w-full rounded-xl group md:w-[300px] md:h-[380px]">
+						<div className="absolute inset-0 z-20 flex justify-center items-center flex-col py-14 px-6">
+							<h3 className="text-3xl font-bold text-zinc-50 select-none text-center flex-1">Registro completo de la boda</h3>
+							<Button as={Link} href="/services" className="bg-[#7CA4DC] w-28 text-black font-semibold">Ver más</Button>
+						</div>
+						<Image src="/home/service/service-1.webp" alt="Novios en sesión fotográfica de boda con fondo montañoso en la playa de La Serena." className="object-cover object-top w-[500px] h-[380px] brightness-[0.2] group-hover:scale-105 md:w-[300px] md:h-[380px]" />
+					</article>
+					<article className="relative w-full rounded-xl group md:w-[300px] md:h-[380px]">
+						<div className="absolute inset-0 z-20 flex justify-center items-center flex-col py-14 px-6">
+							<h3 className="text-3xl font-bold text-zinc-50 select-none text-center flex-1">Sesión de fotos con novios e invitados</h3>
+							<Button as={Link} href="/services" className="bg-[#7CA4DC] w-28 text-black font-semibold">Ver más</Button>
+						</div>
+						<Image src="/home/service/service-2.webp" alt="Fotógrafo de bodas en Santiago capturando el beso de los novios." className="object-cover object-top w-[500px] h-[380px] brightness-[0.2] group-hover:scale-105 md:w-[300px] md:h-[380px]" />
+					</article>
+					<article className="relative w-full rounded-xl group md:w-[300px] md:h-[380px]">
+						<div className="absolute inset-0 z-20 flex justify-center items-center flex-col py-14 px-6">
+							<h3 className="text-3xl font-bold text-zinc-50 select-none text-center flex-1">Fotografía de preparativos y ceremonia</h3>
+							<Button as={Link} href="/services" className="bg-[#7CA4DC] w-28 text-black font-semibold">Ver más</Button>
+						</div>
+						<Image src="/home/service/service-3.webp" alt="Decoración floral en boda en La Serena, fotografía creativa de matrimonio." className="object-cover object-top w-[500px] h-[380px] brightness-[0.2] group-hover:scale-105 md:w-[300px] md:h-[380px]" />
+					</article>
 				</section>
 			</section>
 			<section id="portfolio" data-section="portfolio" className="flex flex-col justify-center items-center w-full max-w-5xl h-auto px-2 z-10 pt-16">
@@ -119,6 +119,10 @@ export default function Home() {
 				<h2 className="text-2xl font-semibold">Detalles de Nuestros Servicios</h2>
 				<AboutScroll />
 			</section>
+			<section className="flex flex-col justify-center items-center z-10 w-full max-w-3xl">
+				<h2 className="text-2xl font-semibold my-10">Preguntas frecuentes</h2>
+				<Acordeon />
+			</section>
 			<section id="contact" data-section="contact" className="flex flex-col justify-center items-center z-10 w-full pt-16">
 				<h2 className="text-2xl font-semibold">Contactanos</h2>
 				<section className="flex flex-col-reverse max-w-5xl w-full justify-center items-center gap-8 py-10 h-auto md:items-start md:flex-row md:justify-between md:gap-8">
@@ -130,14 +134,10 @@ export default function Home() {
 							Si deseas cotizar fotógrafo de matrimonios, déjanos tus datos y te enviaremos una cotización en un máximo de 24 horas
 						</p>
 						<br />
-						<Image src="/home/sonrisa.jpg" alt="Contacto" width={400} height={400} className="rounded-xl hidden md:block" />
+						<Image src="/home/contact.webp" alt="Sesión de fotos de matrimonio en la playa de La Serena al atardecer" width={400} height={400} className="rounded-xl hidden md:block" />
 					</div>
 					<Form />
 				</section>
-			</section>
-			<section className="flex flex-col justify-center items-center z-10 w-full max-w-3xl">
-				<h2 className="text-2xl font-semibold my-10">Preguntas frecuentes</h2>
-				<Acordeon />
 			</section>
 			<section className="grid items-center justify-center grid-cols-1 px-4 py-24 text-center lg:grid-cols-3">
 				<div className="col-auto lg:col-start-2">
