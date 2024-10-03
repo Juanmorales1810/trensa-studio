@@ -42,7 +42,7 @@ export default function App(params: params) {
             (entries) => {
                 const lastImage = entries[0];
                 if (lastImage.isIntersecting) {
-                    setVisibleImages((prev) => prev + 5); // Cargar 5 imágenes más
+                    setVisibleImages((prev) => prev + 6); // Cargar 6 imágenes más
                     observer.disconnect(); // Detener la observación temporalmente
                 }
             },
