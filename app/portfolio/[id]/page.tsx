@@ -4,7 +4,7 @@ import { Modal, ModalBody, ModalContent, ModalHeader, useDisclosure } from "@nex
 import { portfolioDB } from "@/config/portfolio";
 import { Image } from "@nextui-org/image";
 import SwiperGalery from "@/components/swipergalery";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface params {
     params: {
@@ -15,7 +15,10 @@ interface params {
 export default function App(params: params) {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+    const [visibleImages, setVisibleImages] = useState<number>(5); // Número de imágenes iniciales visibles
     const id = params.params.id;
+    const lastImageRef = useRef<HTMLDivElement | null>(null); // Referencia para la última imagen
+
 
     const foundBlog = portfolioDB.find((blog) => blog.slug === id);
     if (!foundBlog) {
@@ -32,6 +35,28 @@ export default function App(params: params) {
     }
 
     const { title, location, date, slug, coverImage, porfolioImages, description } = foundBlog;
+
+    // Observador para cargar más imágenes
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const lastImage = entries[0];
+                if (lastImage.isIntersecting) {
+                    setVisibleImages((prev) => prev + 5); // Cargar 5 imágenes más
+                    observer.disconnect(); // Detener la observación temporalmente
+                }
+            },
+            { threshold: 1 } // Activa cuando la imagen es completamente visible
+        );
+
+        if (lastImageRef.current) {
+            observer.observe(lastImageRef.current);
+        }
+
+        return () => {
+            if (lastImageRef.current) observer.disconnect();
+        };
+    }, [visibleImages]);
 
     const openGallery = (index: number) => {
         setSelectedIndex(index);
@@ -53,17 +78,19 @@ export default function App(params: params) {
                 <p className="text-center text-gray-700">{date}</p>
             </div>
             <div className="flex flex-row flex-wrap justify-center items-center w-full max-w-7xl gap-4">
-                {porfolioImages.map((image, index) => (
+                {porfolioImages.slice(0, visibleImages).map((image, index) => (
                     <Image
                         key={index}
                         className="w-full max-w-sm h-64"
                         src={`https://res.cloudinary.com/dli8ejcjv/image/upload/v1719876222/${slug}/${image}.webp`}
+                        loading="lazy" // Lazy loading de la imagen
                         isBlurred
                         isZoomed
                         alt={title}
                         onClick={() => openGallery(index)}
                     />
                 ))}
+                <div ref={lastImageRef} /> {/* Div de referencia para el último elemento */}
             </div>
             <Modal size="full" isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent>
