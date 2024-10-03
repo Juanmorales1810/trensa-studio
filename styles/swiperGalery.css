@@ -10,14 +10,14 @@
 }
 
 .mySwiper2 {
-    height: 28%;
-    width: 60%;
+    height: auto;
+    max-width: 100%;
     border-radius: 1rem;
     user-select: none;
 }
 
 .mySwiper1 {
-    height: 8%;
+    height: 19%;
     box-sizing: border-box;
     border-radius: 1rem;
 }
@@ -30,4 +30,9 @@
 
 .mySwiper1 .swiper-slide-thumb-active {
     opacity: 1;
+}
+@media (min-width: 768px) {
+    .mySwiper2 {
+        max-width: 50%;
+    }
 }

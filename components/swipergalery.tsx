@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import '@/styles/swiperGalery.css';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-import { Image } from '@nextui-org/image';
+import Image from 'next/image';
 
 interface SwiperGaleryProps {
     images: string[];
@@ -35,9 +35,7 @@ export default function SwiperGalery(props: SwiperGaleryProps) {
                 {props.images.map((image, index) => (
                     <SwiperSlide key={index}>
                         <div>
-                            <Image src={image} alt='Imágenes de la galería' classNames={{
-                                img: 'h-auto object-contain',
-                            }} />
+                            <Image src={image} alt='Imágenes de la galería' width={1920} height={1080} className='object-cover h-[70vh]' />
                         </div>
                     </SwiperSlide>
                 ))}
@@ -55,7 +53,7 @@ export default function SwiperGalery(props: SwiperGaleryProps) {
             >
                 {props.images.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <img src={image} alt='Imágenes de la galería' />
+                        <Image src={image} alt='Imágenes de la galería' width={1920} height={1080} className='object-cover h-[30vh]' />
                     </SwiperSlide>
                 ))}
             </Swiper>
