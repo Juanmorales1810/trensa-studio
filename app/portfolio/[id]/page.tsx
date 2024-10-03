@@ -19,22 +19,7 @@ export default function App(params: params) {
     const id = params.params.id;
     const lastImageRef = useRef<HTMLDivElement | null>(null); // Referencia para la última imagen
 
-
     const foundBlog = portfolioDB.find((blog) => blog.slug === id);
-    if (!foundBlog) {
-        return (
-            <section className="flex flex-col justify-center items-center w-full">
-                <h2 className="text-9xl font-bold bg-gradient-to-br from-amber-300 via-orange-300 to-yellow-500 bg-clip-text text-transparent">
-                    ERROR 404
-                </h2>
-                <h2 className="pt-8 text-3xl font-bold text-center text-black dark:text-white">
-                    Entrada de blog no encontrada.
-                </h2>
-            </section>
-        );
-    }
-
-    const { title, location, date, slug, coverImage, porfolioImages, description } = foundBlog;
 
     // Observador para cargar más imágenes
     useEffect(() => {
@@ -57,6 +42,21 @@ export default function App(params: params) {
             if (lastImageRef.current) observer.disconnect();
         };
     }, [visibleImages]);
+
+    if (!foundBlog) {
+        return (
+            <section className="flex flex-col justify-center items-center w-full">
+                <h2 className="text-9xl font-bold bg-gradient-to-br from-amber-300 via-orange-300 to-yellow-500 bg-clip-text text-transparent">
+                    ERROR 404
+                </h2>
+                <h2 className="pt-8 text-3xl font-bold text-center text-black dark:text-white">
+                    Entrada de blog no encontrada.
+                </h2>
+            </section>
+        );
+    }
+
+    const { title, location, date, slug, coverImage, porfolioImages, description } = foundBlog;
 
     const openGallery = (index: number) => {
         setSelectedIndex(index);
