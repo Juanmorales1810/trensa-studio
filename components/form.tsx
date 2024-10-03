@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/button";
 
 export default function Form() {
     return (
-        <form className="flex flex-col gap-2 md:w-1/2">
+        <form className="flex flex-col gap-2 w-full md:w-1/2 px-2">
             <Input color="primary" label="Nombre completo" />
             <Input color="primary" label="Teléfono" />
             <Input color="primary" label="Mail" />
