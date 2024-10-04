@@ -143,7 +143,7 @@ export default function Home() {
 				<div className="col-auto lg:col-start-2">
 					<p className="mb-2 text-3xl font-semibold text-primary">Descarga nuestra guía completa de servicios</p>
 					<h2 className="mb-6 text-2xl font-normal md:leading-tight md:mb-6">y conoce todos los detalles sobre cómo podemos capturar tu boda de una manera única y especial.</h2>
-					<Button as={Link} href="/Curso Marketing Bodas.pdf" target="_blank" className="bg-[#7CA4DC] mt-4 font-semibold text-black">Descargar curso</Button>
+					<Button as={Link} href="/Guia de Consultas Fotografía y Video Trenza Estudio.pdf" target="_blank" className="bg-[#7CA4DC] mt-4 font-semibold text-black">Descargar curso</Button>
 				</div>
 			</section>
 		</section>
