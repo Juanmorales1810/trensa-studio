@@ -62,7 +62,7 @@ export default function Home() {
 					<SwiperHome />
 				</div>
 				<div className="flex flex-col justify-center items-center z-30 absolute bottom-10 left-[0%] md:left-[15%] md:top-1/2">
-					<Image src="/logo/Logo sin Nada.png" alt="Logo" width={400} height={124} className="pl-4 mb-4 rounded-none" />
+					<Image src="/logo/Logo sin Nada.png" alt="Logo" width={400} height={124} className="pl-4 mb-4 rounded-none w-80 md:w-full" />
 					<h1 className="text-3xl font-bold text-center mb-1 w-full max-w-2xl hidden md:block">Fotografía y Video Profesional para Bodas y Matrimonios en La Serena y Santiago</h1>
 					<p className="text-lg text-center text-zinc-700 w-full max-w-2xl hidden md:block">
 						Capturamos cada momento especial de tu boda, desde los preparativos hasta la
