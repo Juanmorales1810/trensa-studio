@@ -21,6 +21,9 @@ export default function SwiperHome() {
         { id: 3, webp: '/home/swiperHome/swiper-3.webp', small: '/home/swiperHome/swiper-small-3.webp' },
         { id: 4, webp: '/home/swiperHome/swiper-4.webp', small: '/home/swiperHome/swiper-small-4.webp' },
         { id: 5, webp: '/home/swiperHome/swiper-5.webp', small: '/home/swiperHome/swiper-small-5.webp' },
+        { id: 6, webp: '/home/swiperHome/swiper-6.webp', small: '/home/swiperHome/swiper-small-6.webp' },
+        { id: 7, webp: '/home/swiperHome/swiper-7.webp', small: '/home/swiperHome/swiper-small-7.webp' },
+        { id: 8, webp: '/home/swiperHome/swiper-8.webp', small: '/home/swiperHome/swiper-small-8.webp' },
     ]
     return (
         <>
