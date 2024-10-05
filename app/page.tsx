@@ -139,10 +139,10 @@ export default function Home() {
 					<Form />
 				</section>
 			</section>
-			<section className="grid items-center justify-center grid-cols-1 px-4 py-24 text-center lg:grid-cols-3">
+			<section className="grid items-center justify-center grid-cols-1 px-4 py-24 text-center">
 				<div className="col-auto lg:col-start-2">
-					<p className="mb-2 text-3xl font-bold text-primary md:text-nowrap">Descarga nuestra guía completa de servicios</p>
-					<h2 className="mb-6 text-2xl font-normal md:leading-tight md:mb-6 px-2">y conoce todos los detalles sobre cómo podemos capturar tu boda de una manera única y especial.</h2>
+					<p className="mb-2 text-3xl font-bold text-primary">Descarga nuestra guía completa de servicios</p>
+					<h2 className="mb-6 text-2xl font-normal md:leading-tight md:mb-6 max-w-xl">y conoce todos los detalles sobre cómo podemos capturar tu boda de una manera única y especial.</h2>
 					<Button
 						as={Link}
 						href="/Guia de Consultas Fotografía y Video Trenza Estudio.pdf"
