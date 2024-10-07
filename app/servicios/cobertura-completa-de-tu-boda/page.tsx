@@ -129,7 +129,7 @@ export default function Page() {
                 </div>
                 <div className="md:w-1/2 p-12">
                     <Image
-                        src="/home/contact.webp"
+                        src="/home/swiperHome/swiper-8.webp"
                         alt="Novios en sesión fotográfica de boda con fondo montañoso en la playa de La Serena."
                         className="object-cover object-top rotate-6"
                     />

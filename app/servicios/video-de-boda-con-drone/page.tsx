@@ -119,7 +119,7 @@ export default function Page() {
             <div className="flex flex-col justify-around items-center gap-4 px-8 md:flex-row">
                 <div className="md:w-1/2 p-12">
                     <Image
-                        src="/home/contact.webp"
+                        src="/home/swiperHome/swiper-7.webp"
                         alt="Novios en sesión fotográfica de boda con fondo montañoso en la playa de La Serena."
                         className="object-cover object-top rotate-6"
                     />
