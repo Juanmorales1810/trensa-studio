@@ -157,7 +157,7 @@ export default function Home() {
 								/>
 							</svg>
 						}
-					>Descargar curso</Button>
+					>Descargar guía de preguntas</Button>
 				</div>
 			</section>
 		</section>
