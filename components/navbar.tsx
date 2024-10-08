@@ -25,7 +25,7 @@ export const Navbar = () => {
                     <NextLink
                         href="/"
                     >
-                        <Image src="/logo/Logo sin Nada.png" alt="Logo Navbar" width={100} height={32} className="rounded-none w-[100px] h-8" />
+                        <Image src="/logo/Logo sin Nada.webp" alt="Logo Navbar" width={100} height={32} className="rounded-none w-[100px] h-8" />
                     </NextLink>
                 </NavbarBrand>
             </NavbarContent>
