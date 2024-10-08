@@ -107,29 +107,26 @@ export default function AboutScroll() {
     const control5 = useAnimation();
 
     // Usa los hooks fuera de condicionales
-    useScrollAnimation({ control: control2, startOffset: 1789 + windowHeight, endOffset: 1789 + windowHeight * 2 });
-    useScrollAnimation({ control: control3, startOffset: 1790 + windowHeight * 2, endOffset: 1789 + windowHeight * 3 });
-    useScrollAnimation({ control: control4, startOffset: 1790 + windowHeight * 3, endOffset: 1789 + windowHeight * 4 });
-    useScrollAnimation({ control: control5, startOffset: 1790 + windowHeight * 4, endOffset: (1789 - (windowHeight / 5)) + windowHeight * 5 });
+    useScrollAnimation({ control: control2, startOffset: 1850 + windowHeight, endOffset: 1850 + windowHeight * 2 });
+    useScrollAnimation({ control: control3, startOffset: 1851 + windowHeight * 2, endOffset: 1850 + windowHeight * 3 });
+    useScrollAnimation({ control: control4, startOffset: 1851 + windowHeight * 3, endOffset: 1850 + windowHeight * 4 });
+    useScrollAnimation({ control: control5, startOffset: 1851 + windowHeight * 4, endOffset: (1850 - (windowHeight / 5)) + windowHeight * 5 });
 
-    console.log("Tamaño de ventana:", windowHeight);
 
     useEffect(() => {
         const scrollHandler = () => {
             const scrollY = window.scrollY;
-            console.log(scrollY);
-            console.log("Tamaño de ventana:", windowHeight);
 
-            if (scrollY <= 1789 + windowHeight * 2) {
+            if (scrollY <= 1850 + windowHeight * 2) {
                 control1.start("right");
             }
-            if (scrollY > 1790 + windowHeight * 2) {
+            if (scrollY > 1851 + windowHeight * 2) {
                 control1.start("left");
             }
-            if (scrollY > 1790 + windowHeight * 3) {
+            if (scrollY > 1851 + windowHeight * 3) {
                 control1.start("right");
             }
-            if (scrollY > 1790 + windowHeight * 4) {
+            if (scrollY > 1851 + windowHeight * 4) {
                 control1.start("left");
             }
         };
