@@ -58,7 +58,6 @@ export default function Form() {
     );
 
     const onSubmit = handleSubmit(async (data) => {
-        console.log(data);
 
         startLoading()
         await Fetch({
@@ -68,12 +67,6 @@ export default function Form() {
         })
         finishLoading()
     })
-
-    console.log(errors);
-
-    console.log(watch('date'));
-
-
 
     return (
         <form onSubmit={onSubmit} className="flex flex-col gap-2 w-full md:w-1/2 px-2">
