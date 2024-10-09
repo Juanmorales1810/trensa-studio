@@ -28,6 +28,9 @@ export default function Page() {
                     No tienes tiempo ni recursos para dedicarte al marketing digital, y además no sabes por dónde empezar.
                 </li>
             </ul>
+            <div className='flex justify-center items-center mb-8'>
+                <Image src="/curso-marketing/CURSO MARKETING PARA BODAS .webp" alt="Fotógrafo de bodas en Santiago capturando el beso de los novios." className="object-cover object-top w-full" />
+            </div>
             <h3 className='text-3xl font-semibold mb-2'>
                 ¿Estás listo para llevar tu negocio de bodas al siguiente nivel?
             </h3>
@@ -43,7 +46,7 @@ export default function Page() {
             <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
                 Soy Felipe, director de Trenza Comunicaciones, y estoy aquí para ayudarte a cambiar esa realidad. He trabajado durante años en el sector de marketing digital y he visto cómo muchos proveedores talentosos se quedan en la sombra por no saber cómo destacar en el mundo online. Pero hoy, tengo la solución que has estado buscando.
             </p>
-            <div className='flex justify-between gap-4'>
+            <div className='flex justify-between items-center gap-4'>
                 <div className='w-2/3'>
                     <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
                         Imagina poder multiplicar tus reservas, atraer más novios y, sobre todo, ver cómo tu negocio de bodas florece gracias a estrategias efectivas de marketing digital. ¿Te gustaría aprender a utilizar las redes sociales y otras plataformas online para hacer crecer tu marca de manera significativa?
@@ -56,7 +59,7 @@ export default function Page() {
                     </p>
                 </div>
                 <div className='flex justify-center items-center w-1/3'>
-                    <Image src="/home/service/service-1.webp" alt="Fotógrafo de bodas en Santiago capturando el beso de los novios." className="object-cover object-top w-full" />
+                    <Image src="/curso-marketing/IMG_6481.webp" alt="Fotógrafo de bodas en Santiago capturando el beso de los novios." className="object-cover object-top w-full" />
                 </div>
             </div>
             <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
