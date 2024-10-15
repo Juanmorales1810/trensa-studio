@@ -7,17 +7,20 @@ import Link from 'next/link'
 
 export default function Page() {
     return (
-        <section className='flex flex-col justify-center items-center w-full max-w-5xl mt-16 mx-auto px-2 py-8'>
-            <h1 className='text-3xl font-medium mb-4'>
+        <section className='flex flex-col justify-center items-center w-full max-w-6xl mt-16 mx-auto px-2 py-8'>
+            <h1 className='text-5xl font-bold mb-4 py-4 text-center text-balance bg-gradient-to-tr from-blue-500 to-blue-300 bg-clip-text text-transparent'>
                 ¿Estás luchando para conseguir más clientes?
             </h1>
-            <p className='text-pretty indent-4 text-xl text-zinc-800 mb-8'>
+            <div className='flex justify-center items-center mb-8'>
+                <Image src="/curso-marketing/marketing-1.webp" alt="Fotógrafo de bodas en Santiago capturando el beso de los novios." className="object-cover object-top w-full max-w-2xl" />
+            </div>
+            <p className='text-pretty indent-4 text-2xl text-zinc-700 mb-8 max-w-3xl text-center dark:text-zinc-50'>
                 Si eres un proveedor de servicios de bodas y confías únicamente en las recomendaciones boca a boca, estás dejando de lado una oportunidad enorme para hacer crecer tu negocio. Las redes sociales y el marketing digital son herramientas poderosas, pero muchos proveedores de servicios matrimoniales no saben cómo aprovecharlas. Esto deja a muchos con poca visibilidad y luchando contra la competencia feroz.
             </p>
-            <h2 className='text-2xl font-medium mb-4'>
+            <h2 className='text-3xl font-semibold mb-4 bg-gradient-to-tl from-blue-700 to-blue-300 bg-clip-text text-transparent'>
                 ¿Te identificas con alguno de estos problemas?
             </h2>
-            <ul className='list-disc list-inside flex flex-col justify-center items-center gap-2 text-xl mb-6'>
+            <ul className='list-disc list-inside flex flex-col justify-center items-center gap-2 text-xl mb-6 dark:text-zinc-50'>
                 <li>
                     Tu Instagram o Facebook no atraen nuevos clientes.
                 </li>
@@ -31,46 +34,53 @@ export default function Page() {
             <div className='flex justify-center items-center mb-8'>
                 <Image src="/curso-marketing/CURSO MARKETING PARA BODAS .webp" alt="Fotógrafo de bodas en Santiago capturando el beso de los novios." className="object-cover object-top w-full" />
             </div>
-            <h3 className='text-3xl font-semibold mb-2'>
+            <h3 className='text-3xl font-semibold mb-2 text-center'>
                 ¿Estás listo para llevar tu negocio de bodas al siguiente nivel?
             </h3>
-            <p className='text-4xl font-bold text-cyan-600 mb-8'>
+            <p className='text-5xl font-bold mb-8 py-2 bg-gradient-to-tr from-zinc-200 via-blue-500 to-zinc-50 bg-clip-text text-transparent text-center'>
                 ¡Inscríbete hoy mismo!
             </p>
-            <h3 className='text-4xl font-bold mb-4'>
+            <h3 className='text-5xl py-2 font-bold mb-4 bg-gradient-to-bl from-green-300 via-green-500 to-green-400 bg-clip-text text-transparent md:text-7xl'>
                 ¡Bienvenidos!
             </h3>
-            <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
+            <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium dark:text-zinc-50 text-center md:text-left'>
                 ¿Estás cansado de no tener la visibilidad que mereces en el competitivo mundo de los matrimonios? ¿Sientes que tus habilidades y servicios no llegan a las parejas que realmente los necesitan? No estás solo. Muchos proveedores de servicios para bodas se enfrentan a estos mismos desafíos. Es frustrante invertir tiempo y esfuerzo en tu negocio sin ver los resultados que deseas.
             </p>
-            <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
+            <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium dark:text-zinc-50 text-center md:text-left'>
                 Soy Felipe, director de Trenza Comunicaciones, y estoy aquí para ayudarte a cambiar esa realidad. He trabajado durante años en el sector de marketing digital y he visto cómo muchos proveedores talentosos se quedan en la sombra por no saber cómo destacar en el mundo online. Pero hoy, tengo la solución que has estado buscando.
             </p>
-            <div className='flex justify-between items-center gap-4'>
-                <div className='w-2/3'>
-                    <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
+            <div className='flex justify-between items-center gap-4 flex-col md:flex-row'>
+                <div className='md:w-2/3 text-center'>
+                    <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium dark:text-zinc-50 md:text-left'>
                         Imagina poder multiplicar tus reservas, atraer más novios y, sobre todo, ver cómo tu negocio de bodas florece gracias a estrategias efectivas de marketing digital. ¿Te gustaría aprender a utilizar las redes sociales y otras plataformas online para hacer crecer tu marca de manera significativa?
                     </p>
-                    <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
+                    <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium dark:text-zinc-50 md:text-left'>
                         En este curso, te guiaré a través de un proceso sencillo y efectivo que transformará tu enfoque de negocio. Aprenderás cómo optimizar tu presencia en línea, cómo atraer la atención de las parejas que están buscando exactamente lo que tú ofreces y cómo establecer una conexión auténtica que te diferencie de la competencia.
                     </p>
-                    <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
+                    <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium dark:text-zinc-50 md:text-left'>
                         ¿Te preguntas si esto realmente funcionará para ti? La respuesta es sí. Este curso está diseñado específicamente para proveedores de servicios de bodas como tú: fotógrafos, diseñadores de vestidos, organizadores de eventos y mucho más. Te proporcionaré herramientas y estrategias prácticas que podrás implementar de inmediato.
                     </p>
                 </div>
-                <div className='flex justify-center items-center w-1/3'>
-                    <Image src="/curso-marketing/IMG_6481.webp" alt="Fotógrafo de bodas en Santiago capturando el beso de los novios." className="object-cover object-top w-full" />
+                <div className='flex justify-center items-center md:w-1/3'>
+                    <Image src="/curso-marketing/IMG_6481.webp" alt="Fotógrafo de bodas en Santiago capturando el beso de los novios." className="object-cover object-top w-full h-96" />
                 </div>
             </div>
-            <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
-                Además, tendrás acceso a una comunidad de profesionales apasionados como tú, donde podrás compartir experiencias, hacer preguntas y recibir apoyo. La colaboración es clave en este sector, y estoy aquí para asegurarme de que nunca te sientas solo en este camino.
-            </p>
-            <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium'>
-                Así que, ¿estás listo para llevar tu negocio de bodas al siguiente nivel? ¿Listo para atraer a más novios y ver cómo tus esfuerzos se traducen en éxito tangible? No dejes que la falta de visibilidad siga frenando tu crecimiento. Únete a nosotros y empieza a transformar tu negocio hoy mismo.
-            </p>
-            <p className='text-pretty indent-4 text-xl text-zinc-900 mb-10 tracking-wide font-medium'>
-                Recuerda, el éxito no es solo un destino, es un viaje. Y estoy aquí para acompañarte en cada paso del camino. ¡Hagamos que tu marca brille y atraiga la atención que merece! Inscríbete ahora y comencemos juntos este emocionante viaje hacia el éxito.
-            </p>
+            <div className='flex justify-between items-center gap-4 flex-col-reverse md:flex-row pb-8'>
+                <div className='flex justify-center items-center md:w-1/3'>
+                    <Image src="/curso-marketing/marketing.webp" alt="Fotógrafo de bodas en Santiago capturando el beso de los novios." className="object-cover object-top w-full h-96" />
+                </div>
+                <div className='md:w-2/3 text-center'>
+                    <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium dark:text-zinc-50 md:text-left'>
+                        Además, tendrás acceso a una comunidad de profesionales apasionados como tú, donde podrás compartir experiencias, hacer preguntas y recibir apoyo. La colaboración es clave en este sector, y estoy aquí para asegurarme de que nunca te sientas solo en este camino.
+                    </p>
+                    <p className='text-pretty indent-4 text-xl text-zinc-900 mb-4 tracking-wide font-medium dark:text-zinc-50 md:text-left'>
+                        Así que, ¿estás listo para llevar tu negocio de bodas al siguiente nivel? ¿Listo para atraer a más novios y ver cómo tus esfuerzos se traducen en éxito tangible? No dejes que la falta de visibilidad siga frenando tu crecimiento. Únete a nosotros y empieza a transformar tu negocio hoy mismo.
+                    </p>
+                    <p className='text-pretty indent-4 text-xl text-zinc-900 mb-10 tracking-wide font-medium dark:text-zinc-50 md:text-left'>
+                        Recuerda, el éxito no es solo un destino, es un viaje. Y estoy aquí para acompañarte en cada paso del camino. ¡Hagamos que tu marca brille y atraiga la atención que merece! Inscríbete ahora y comencemos juntos este emocionante viaje hacia el éxito.
+                    </p>
+                </div>
+            </div>
             <Button
                 as={Link}
                 href="https://wa.me/+56923748433?text=Hola!%20Me%20gustaria%20hacer%20una%20reserva.%20Tenes%20alguna%20reservacion%20disponible?%20Muchas%20gracias!😊"
