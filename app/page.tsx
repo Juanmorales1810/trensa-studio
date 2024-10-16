@@ -1,6 +1,7 @@
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import CallToAction from "@/components/callToAction";
 import AboutScroll from "@/components/aboutScroll";
+import YouTubeLite from "@/components/youTubeLite";
 import SwiperHome from "@/components/swiperHome";
 import Acordeon from "@/components/acordeon";
 import { Button } from "@nextui-org/button";
@@ -107,6 +108,9 @@ export default function Home() {
 				<h2 className="text-2xl font-semibold pb-4">Un poco de nosotros</h2>
 				<Bento />
 				<Button as={Link} href="/portfolio" className="bg-[#7CA4DC] text-black">Ver más</Button>
+			</section>
+			<section className="flex flex-col justify-center items-center w-full max-w-5xl h-auto px-2 z-10 pt-16">
+				<YouTubeLite />
 			</section>
 			<section id="testimonials" data-section="testimonials" className="flex flex-col justify-center items-center z-10 w-full overflow-hidden pt-16">
 				<h2 className="text-2xl font-semibold">Testimonios</h2>
