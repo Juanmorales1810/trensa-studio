@@ -16,6 +16,45 @@
     justify-content: center;
 }
 
+.youTubeBtn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right: 0;
+    border-left: 40px solid white;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+.youTubeBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7ca4dc;
+    border-radius: 16px;
+    width: 130px;
+    height: 75px;
+    transition: ease-in-out 0.3s;
+}
+.youTubeBtn:hover {
+    background-color: #6a8cbd;
+    transition: ease-in-out 0.3s;
+}
+.youTubeBtn:hover::after {
+    transition: ease-in-out 0.3s;
+    border: 25px solid transparent;
+    border-right: 0;
+    border-left: 50px solid white;
+}
+.youTubeArticle {
+    background-image: url("https://www.trenzaestudiofotografia.cl/metadata.jpg");
+}
+
 html {
     scroll-behavior: smooth;
 }
