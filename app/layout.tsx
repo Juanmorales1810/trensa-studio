@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
 import Footer from "@/components/footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const viewport: Viewport = {
 	themeColor: [
@@ -134,6 +135,7 @@ export default function RootLayout({
 					</div>
 				</Providers>
 			</body>
+			<GoogleAnalytics gaId="G-2R3T93JW6H" />
 		</html>
 	);
 }
