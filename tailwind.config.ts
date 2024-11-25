@@ -48,6 +48,7 @@ module.exports = {
             addUtilities(newUtilities);
         },
         require("tailwindcss-animated"),
+        require("@tailwindcss/typography"),
     ],
 };
 function addVariablesForColors({ addBase, theme }: any) {
