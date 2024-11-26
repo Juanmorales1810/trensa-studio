@@ -1,7 +1,9 @@
-import CardBlog from "@/components/cardBlogs";
-import { connectMongoDB } from "@/lib/mongodb";
 import { TrenzaMatrimoniosBlogsModel } from "@/models/trenza";
+import { connectMongoDB } from "@/lib/mongodb";
+import CardBlog from "@/components/cardBlogs";
 import { cache } from "react";
+
+export const dynamic = "force-dynamic";
 
 const getItems = cache(async function loadMenu() {
 	await connectMongoDB();
