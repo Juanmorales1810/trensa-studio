@@ -28,7 +28,7 @@ const schema = z.object({
         .max(50, { message: 'El nombre debe tener menos de 50 caracteres' }),
     phone: z.string()
         .min(9, { message: 'El teléfono debe tener al menos 9 caracteres' })
-        .max(9, { message: 'El teléfono debe tener menos de 9 caracteres' }),
+        .max(14, { message: 'El teléfono debe tener menos de 14 caracteres' }),
     email: z.string().email(),
     date: z.string(),
     message: z.string()
