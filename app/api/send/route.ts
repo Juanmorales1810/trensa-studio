@@ -28,7 +28,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
         const { data, error } = await resend.emails.send({
             from: "TrenzaMatrimonios <onboarding@resend.dev>",
-            to: ["juan1810.jm@gmail.com"],
+            to: ["trenzaestudio@gmail.com"],
             subject: "Consulta de Trenza Matrimonios",
             react: EmailTemplate({
                 fullname: body.fullname,
