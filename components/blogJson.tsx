@@ -89,14 +89,14 @@ function renderContent(node: Node): React.ReactNode {
         case 'heading':
             const HeadingTag = `h${node.attrs.level}` as keyof JSX.IntrinsicElements;
             return (
-                <HeadingTag key={JSON.stringify(node)} style={{ textAlign: node.attrs.textAlign }}>
+                <HeadingTag key={JSON.stringify(node)} style={{ textAlign: node.attrs?.textAlign }}>
                     {node.content.map((child, index) => renderContent(child))}
                 </HeadingTag>
             );
 
         case 'paragraph':
             return (
-                <p key={JSON.stringify(node)} style={{ textAlign: node.attrs.textAlign }}>
+                <p key={JSON.stringify(node)} style={{ textAlign: node.attrs?.textAlign }}>
                     {node.content.map((child, index) => renderContent(child))}
                 </p>
             );
@@ -124,21 +124,21 @@ function renderContent(node: Node): React.ReactNode {
 
         case 'bulletList':
             return (
-                <ul key={JSON.stringify(node)} style={{ textAlign: node.attrs.textAlign }}>
+                <ul key={JSON.stringify(node)} style={{ textAlign: node.attrs?.textAlign }}>
                     {node.content.map((child, index) => renderContent(child))}
                 </ul>
             );
 
         case 'listItem':
             return (
-                <li key={JSON.stringify(node)} style={{ textAlign: node.attrs.textAlign }}>
+                <li key={JSON.stringify(node)} style={{ textAlign: node.attrs?.textAlign }}>
                     {node.content.map((child, index) => renderContent(child))}
                 </li>
             );
 
         case 'orderedList':
             return (
-                <ol key={JSON.stringify(node)} style={{ textAlign: node.attrs.textAlign }}>
+                <ol key={JSON.stringify(node)} style={{ textAlign: node.attrs?.textAlign }}>
                     {node.content.map((child, index) => renderContent(child))}
                 </ol>
             );
@@ -146,7 +146,7 @@ function renderContent(node: Node): React.ReactNode {
         case 'codeBlock':
             return (
                 <pre key={JSON.stringify(node)} >
-                    <code className="text-pretty" style={{ textAlign: node.attrs.textAlign }}>{node.content.map((child, index) => renderContent(child))}</code>
+                    <code className="text-pretty" style={{ textAlign: node.attrs?.textAlign }}>{node.content.map((child, index) => renderContent(child))}</code>
                 </pre>
             );
 
@@ -154,7 +154,7 @@ function renderContent(node: Node): React.ReactNode {
             return (
                 <a key={JSON.stringify
                     (node)} href={node.attrs.href}
-                    style={{ textAlign: node.attrs.textAlign }}>
+                    style={{ textAlign: node.attrs?.textAlign }}>
                     {node.content.map((child, index) => renderContent(child))}
                 </a>
             );
