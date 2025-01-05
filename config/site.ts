@@ -33,7 +33,7 @@ export const siteConfig = {
         },
         {
             label: "Portafolio",
-            href: "/#portfolio",
+            href: "/portfolio",
         },
         {
             label: "Testimonios",
