@@ -19,7 +19,7 @@ export default async function BlogPage() {
 	return (
 		<div>
 			<h1 className="h-16 text-3xl font-semibold">Blogs</h1>
-			<div className="grid grid-cols-1 gap-4 w-full max-w-6xl mx-auto md:grid-cols-2">
+			<div className="grid grid-cols-1 gap-4 w-full max-w-6xl mx-auto px-2 md:grid-cols-2">
 				{blogs.map((blog) => (
 					<CardBlog
 						key={blog._id}
