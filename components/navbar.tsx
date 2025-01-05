@@ -1,25 +1,27 @@
-import {
-    Navbar as NextUINavbar,
-    NavbarContent,
-    NavbarMenu,
-    NavbarMenuToggle,
-    NavbarBrand,
-    NavbarItem,
-    NavbarMenuItem,
-} from "@nextui-org/navbar";
+"use client";
+
+import { Navbar as NextUINavbar, NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarBrand, NavbarItem, NavbarMenuItem } from "@nextui-org/navbar";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { link as linkStyles } from "@nextui-org/theme";
 import { Button } from "@nextui-org/button";
 import { siteConfig } from "@/config/site";
+import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import NextLink from "next/link";
+import { useState } from "react";
 import clsx from "clsx";
-import { Image } from "@nextui-org/image";
 
 export const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <NextUINavbar maxWidth="xl" position="static" className="fixed bg-zinc-100 dark:bg-zinc-950">
+        <NextUINavbar
+            isMenuOpen={isMenuOpen}
+            onMenuOpenChange={setIsMenuOpen}
+            maxWidth="xl"
+            position="static"
+            className="fixed bg-zinc-100 dark:bg-zinc-950"
+        >
             <NavbarContent className="basis-1/5 w-[100px] h-8" justify="start">
                 <NavbarBrand as="li" className="max-w-fit w-[100px] h-8">
                     <NextLink
@@ -91,7 +93,11 @@ export const Navbar = () => {
                 <div className="mx-4 mt-2 flex flex-col gap-2">
                     {siteConfig.navMenuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
-                            <Link color="primary" href={item.href} size="lg">
+                            <Link
+                                onClick={() => { setIsMenuOpen(false) }}
+                                color="primary"
+                                href={item.href}
+                                size="lg">
                                 {item.label}
                             </Link>
                         </NavbarMenuItem>
